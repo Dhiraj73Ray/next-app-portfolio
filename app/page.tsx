@@ -4,10 +4,12 @@ import Skills from "../components/sections/Skills";
 import Projects from "../components/sections/Projects";
 import Experience from "../components/sections/Experience";
 import Contact from "../components/sections/Contact";
+import Welcome from "@/components/sections/Welcome";
 
 export default function Home() {
   return (
     <main id="main">
+      {/* <Welcome /> */}
       <Hero />
       <About />
       <Skills />

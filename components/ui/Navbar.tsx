@@ -2,13 +2,26 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { site } from "../../data/siteConfig";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const { scrollY } = useScroll();
 
-  // Menu khula ho: Esc se band, aur peeche ka page scroll lock
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    if (typeof window !== "undefined") {
+      setIsVisible(latest > window.innerHeight * 0.5);
+    }
+  });
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setIsVisible(window.scrollY > window.innerHeight * 0.5);
+    }
+  }, []);
+
   useEffect(() => {
     if (!open) return;
     const onKey = (e: KeyboardEvent) => {
@@ -23,7 +36,6 @@ export default function Navbar() {
     };
   }, [open]);
 
-  // Screen desktop size ho jaye (rotate/resize) toh menu band
   useEffect(() => {
     const mq = window.matchMedia("(min-width: 768px)");
     const onChange = () => {
@@ -35,8 +47,11 @@ export default function Navbar() {
 
   return (
     <>
-      {/* Height = --nav-h exactly (border-box), taaki menu ke saath koi gap/double line na bane */}
-      <header className="fixed top-0 left-0 z-50 h-[var(--nav-h)] w-full border-b border-ink bg-cream/90 backdrop-blur-sm">
+      <header 
+        className={`fixed top-0 left-0 z-50 h-[var(--nav-h)] w-full border-b border-ink bg-cream/90 backdrop-blur-sm transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+          isVisible ? "translate-y-0" : "-translate-y-full"
+        }`}
+      >
         <div className="mx-auto flex h-full max-w-7xl items-center justify-between px-6 md:px-8">
           <Link href="/" className="font-serif text-lg font-bold tracking-tight text-ink md:text-xl">
             {site.name}
@@ -66,7 +81,6 @@ export default function Navbar() {
         </div>
       </header>
 
-      {/* Header ke bahar: backdrop-blur wale parent ke andar fixed element sahi se nahi chipakta */}
       <AnimatePresence>
         {open && (
           <>
@@ -83,7 +97,6 @@ export default function Navbar() {
             <motion.div
               id="mobile-menu"
               key="panel"
-              // Kagaz upar se neeche khulta hai
               initial={{ clipPath: "inset(0 0 100% 0)" }}
               animate={{ clipPath: "inset(0 0 0% 0)" }}
               exit={{ clipPath: "inset(0 0 100% 0)" }}
