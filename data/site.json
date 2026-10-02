@@ -1,0 +1,24 @@
+{
+  "name": "Aarav Sharma",
+  "role": "Full-Stack Developer & ECE Engineer",
+  "tagline": "I build systems that connect hardware, data, and AI.",
+  "url": "https://your-domain.com",
+  "email": "hello@your-domain.com",
+  "location": "Bengaluru, India",
+  "timezone": "Asia/Kolkata",
+  "availability": { "open": true, "label": "Open to roles and freelance work" },
+  "responseTime": "Usually within a day",
+  "resume": "",
+  "socials": [
+    { "label": "GitHub", "url": "https://github.com/your-handle" },
+    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/your-handle" }
+  ],
+  "nav": [
+    { "label": "About", "href": "#about" },
+    { "label": "Skills", "href": "#skills" },
+    { "label": "Projects", "href": "#projects" },
+    { "label": "Experience", "href": "#experience" },
+    { "label": "Contact", "href": "#contact" }
+  ],
+  "topics": ["A project", "A job", "A collab", "Just saying hi"]
+}

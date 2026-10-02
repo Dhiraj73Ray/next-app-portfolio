@@ -1,0 +1,44 @@
+{
+  "experience": [
+    {
+      "id": "exp-1",
+      "role": "Full-Stack Developer Intern",
+      "company": "TechNova Solutions",
+      "location": "Remote",
+      "start": "Jun 2024",
+      "end": "Aug 2024",
+      "description": "Built a customer support dashboard with Next.js and FastAPI. Reduced ticket resolution time by 30%.",
+      "tech": ["Next.js", "FastAPI", "PostgreSQL", "Tailwind"]
+    },
+    {
+      "id": "exp-2",
+      "role": "Freelance Web Developer",
+      "company": "Self-employed",
+      "location": "Remote",
+      "start": "Jan 2024",
+      "end": "Present",
+      "description": "Developed 5+ websites for local businesses. Handled everything from design to deployment.",
+      "tech": ["React", "Node.js", "MongoDB", "Vercel"]
+    },
+    {
+      "id": "exp-3",
+      "role": "Open Source Contributor",
+      "company": "Various Projects",
+      "location": "Remote",
+      "start": "2023",
+      "end": "Present",
+      "description": "Contributed bug fixes and documentation to FastAPI and Supabase community projects.",
+      "tech": ["Python", "FastAPI", "PostgreSQL", "Git"]
+    },
+    {
+      "id": "exp-4",
+      "role": "Hackathon Participant",
+      "company": "Smart India Hackathon",
+      "location": "Bengaluru",
+      "start": "Dec 2023",
+      "end": "Dec 2023",
+      "description": "Led a team of 4 to build an IoT-based crop monitoring system. Won 2nd place.",
+      "tech": ["ESP32", "MQTT", "React", "FastAPI"]
+    }
+  ]
+}

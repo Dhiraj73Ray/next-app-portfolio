@@ -1,0 +1,109 @@
+{
+  "projects": [
+    {
+      "id": "neuro-notes",
+      "title": "NeuroNotes AI",
+      "year": "2024",
+      "type": "AI / Full-Stack",
+      "summary": "AI-powered note summarizer with semantic search.",
+      "description": "Built a full-stack app that ingests lecture notes and generates summaries, flashcards, and Q&A using LLMs. Implemented vector search with pgvector for semantic retrieval.",
+      "tech": ["Next.js", "FastAPI", "PostgreSQL", "pgvector", "OpenAI", "Tailwind"],
+      "metrics": [
+        { "label": "Users", "value": "1,200+" },
+        { "label": "Summaries", "value": "8,500+" },
+        { "label": "Avg. response", "value": "320ms" }
+      ],
+      "links": {
+        "github": "https://github.com/...",
+        "live": "https://..."
+      },
+      "image": "/projects/neuro-notes.jpg",
+      "featured": true
+    },
+    {
+      "id": "smart-grid",
+      "title": "Smart Grid Monitor",
+      "year": "2023",
+      "type": "IoT / Embedded",
+      "summary": "Real-time energy monitoring with ESP32 and MQTT.",
+      "description": "Designed a low-cost IoT system to monitor voltage, current, and power factor across multiple nodes. Data streamed via MQTT to a FastAPI backend and visualized in React.",
+      "tech": ["ESP32", "MQTT", "FastAPI", "React", "PostgreSQL", "Docker"],
+      "metrics": [
+        { "label": "Nodes", "value": "12" },
+        { "label": "Data points/day", "value": "50k" },
+        { "label": "Latency", "value": "<200ms" }
+      ],
+      "links": { "github": "https://github.com/..." },
+      "image": "/projects/smart-grid.jpg",
+      "featured": true
+    },
+    {
+      "id": "vlsi-alu",
+      "title": "8-bit ALU in Verilog",
+      "year": "2023",
+      "type": "VLSI / Hardware",
+      "summary": "Designed and simulated an 8-bit ALU using Verilog and Xilinx Vivado.",
+      "description": "Implemented arithmetic and logic operations, verified with testbenches, and synthesized for FPGA. Achieved 150 MHz clock frequency.",
+      "tech": ["Verilog", "Vivado", "FPGA", "Digital Design"],
+      "metrics": [
+        { "label": "Clock", "value": "150 MHz" },
+        { "label": "LUTs", "value": "342" },
+        { "label": "Power", "value": "0.8W" }
+      ],
+      "links": { "github": "https://github.com/..." },
+      "image": "/projects/vlsi-alu.jpg",
+      "featured": false
+    },
+    {
+      "id": "devconnect",
+      "title": "DevConnect",
+      "year": "2024",
+      "type": "Full-Stack",
+      "summary": "A social platform for developers to share projects and find collaborators.",
+      "description": "Built with Next.js, Supabase, and Tailwind. Features authentication, real-time chat, project showcases, and a recommendation engine.",
+      "tech": ["Next.js", "Supabase", "Tailwind", "TypeScript", "PostgreSQL"],
+      "metrics": [
+        { "label": "Users", "value": "800+" },
+        { "label": "Projects shared", "value": "2,300" },
+        { "label": "Messages/day", "value": "5k" }
+      ],
+      "links": { "github": "https://github.com/...", "live": "https://..." },
+      "image": "/projects/devconnect.jpg",
+      "featured": true
+    },
+    {
+      "id": "pi-nas",
+      "title": "Raspberry Pi NAS",
+      "year": "2022",
+      "type": "Hardware / DevOps",
+      "summary": "DIY network-attached storage with Raspberry Pi and Samba.",
+      "description": "Configured a headless Raspberry Pi as a NAS with automated backups, media streaming, and remote access via Tailscale.",
+      "tech": ["Raspberry Pi", "Linux", "Samba", "Tailscale", "Bash"],
+      "metrics": [
+        { "label": "Storage", "value": "2TB" },
+        { "label": "Uptime", "value": "99.9%" },
+        { "label": "Transfer speed", "value": "110 MB/s" }
+      ],
+      "links": { "github": "https://github.com/..." },
+      "image": "/projects/pi-nas.jpg",
+      "featured": false
+    },
+    {
+      "id": "dsa-visualizer",
+      "title": "DSA Visualizer",
+      "year": "2023",
+      "type": "Education / Frontend",
+      "summary": "Interactive visualizations for common data structures and algorithms.",
+      "description": "Built with React and Framer Motion. Covers sorting, searching, trees, and graphs with step-by-step animations and complexity analysis.",
+      "tech": ["React", "TypeScript", "Framer Motion", "Tailwind"],
+      "metrics": [
+        { "label": "Algorithms", "value": "18" },
+        { "label": "Monthly visits", "value": "4k" },
+        { "label": "GitHub stars", "value": "120" }
+      ],
+      "links": { "github": "https://github.com/...", "live": "https://..." },
+      "image": "/projects/dsa-visualizer.jpg",
+      "featured": false
+    }
+  ]
+}

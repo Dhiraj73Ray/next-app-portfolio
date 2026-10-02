@@ -1,0 +1,34 @@
+{
+  "roles": [
+    {
+      "id": "redtape",
+      "company": "REDTAPE",
+      "role": "Full-Stack Developer",
+      "type": "Full-time",
+      "location": "City, India",
+      "start": "MMM YYYY",
+      "end": null,
+      "highlights": [
+        "Describe your biggest piece of work here: what you built and at what scale.",
+        "Add one measurable result (speed, users, time saved).",
+        "Add one thing you took ownership of and shipped."
+      ],
+      "stack": ["React", "FastAPI", "PostgreSQL"]
+    },
+    {
+      "id": "keerti-education",
+      "company": "Keerti Education",
+      "role": "Developer",
+      "type": "Internship / Contract",
+      "location": "City, India",
+      "start": "MMM YYYY",
+      "end": "MMM YYYY",
+      "highlights": [
+        "Describe what you built here.",
+        "Describe the problem you solved.",
+        "Describe what you learned that carried forward."
+      ],
+      "stack": ["Python", "React", "SQL"]
+    }
+  ]
+}

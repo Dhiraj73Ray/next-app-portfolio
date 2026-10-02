@@ -1,0 +1,10 @@
+{
+  "blogs": [
+    {
+      "title": "Why I Chose FastAPI Over Flask for My AI Projects",
+      "date": "2024-05-10",
+      "url": "/blog/fastapi-vs-flask",
+      "summary": "A comparison of performance, async support, and developer experience."
+    }
+  ]
+}

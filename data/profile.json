@@ -1,0 +1,71 @@
+{
+  "name": "Aarav Sharma",
+  "role": "Full-Stack Developer & ECE Engineer",
+  "tagline": "I build systems that connect hardware, data, and AI.",
+  "location": "Bengaluru, India",
+  "availability": "Open to internships & full-time roles",
+  "email": "aarav.sharma@example.com",
+  "socials": {
+    "github": "https://github.com/aaravsharma",
+    "linkedin": "https://linkedin.com/in/aaravsharma",
+    "twitter": "https://twitter.com/aaravsharma"
+  },
+  "resumeUrl": "/resume.pdf",
+  "about": {
+    "short": "Fresher developer with a strong foundation in Python, React, and embedded systems. I love building products that bridge the physical and digital worlds.",
+    "long": "I'm an Electronics and Communication Engineering graduate who fell in love with software. Over the past two years I've built full-stack apps, IoT prototypes, and AI tools. I'm comfortable from PCB to PostgreSQL, from Arduino to AWS. Currently exploring VLSI design and edge AI.",
+    "facts": [
+      {
+        "label": "Focus",
+        "value": "Full-Stack + AI + IoT"
+      },
+      {
+        "label": "Currently Learning",
+        "value": "VLSI Design, Rust"
+      },
+      {
+        "label": "Languages",
+        "value": "English, Hindi, Kannada"
+      }
+    ],
+    "philosophy": [
+      {
+        "id": "01",
+        "title": "The Clean Layer Obsession",
+        "description": "Designing backend structures and API interfaces that are intuitive, scalable, and ruthlessly efficient."
+      },
+      {
+        "id": "02",
+        "title": "Aggressive Automation",
+        "description": "If a task has to be done manually more than twice, it deserves a script. I build automation layers to handle the mundane, freeing mental bandwidth for complex architecture."
+      },
+      {
+        "id": "03",
+        "title": "The Translation Engine",
+        "description": "High-level engineering is useless if it lives in an ivory tower. I distill dense, abstract technical concepts into plain, transparent ideas that anyone can immediately execute on."
+      }
+    ],
+    "background": {
+      "intro": "When the IDE is closed, my brain doesn't stop optimizing. The same mindset that drives my code runs my personal world.",
+      "sections": [
+        {
+          "title": "Strategic Sandboxes & Tacticals",
+          "content": "I view gaming through an engineering lens. Whether I am architecting complex automated systems in Minecraft survival or executing tight, calculated rotations with a team in BGMI, it's all optimization and risk management under a different skin."
+        },
+        {
+          "title": "Structural Storytelling",
+          "content": "I have a deep appreciation for the high-stakes narrative scales and razor-sharp character designs found in modern manga and anime. Analyzing the tactical depth of Jujutsu Kaisen or the absolute scale of One-Punch Man satisfies my love for brilliant, creative world-building."
+        }
+      ],
+      "runtime": {
+        "status": "active",
+        "up_time": "24/7",
+        "fuel_sources": [
+          "ambient_lofi",
+          "2am_tech_forums",
+          "workflow_rhythm"
+        ]
+      }
+    }
+  }
+}
