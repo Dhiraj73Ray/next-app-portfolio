@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import { LeftSidebar, RightSidebar } from "../about/AboutSidebar";
 import profile from "../../data/profile.json";
 
@@ -22,7 +22,7 @@ export default function About() {
     return () => observer.disconnect();
   }, []);
 
-  const sectionVariants = {
+  const sectionVariants: Variants = {
     hidden: { opacity: 0, y: 15 },
     visible: {
       opacity: 1,
@@ -84,7 +84,7 @@ export default function About() {
         <div className="max-w-[1400px] mx-auto flex items-start px-8 py-24">
           <LeftSidebar activeSection={activeSection} />
 
-          <main className="flex-1 min-w-0 lg:px-12">
+          <div className="flex-1 min-w-0 lg:px-12">
             <div className="max-w-2xl mx-auto">
               {/* Doc path label */}
               <div className="font-mono text-xs text-olive mb-3">
@@ -92,9 +92,9 @@ export default function About() {
               </div>
 
               {/* Title */}
-              <h1 className="font-serif text-5xl md:text-6xl tracking-tight text-ink mb-4">
+              <h2 className="font-serif text-5xl md:text-6xl tracking-tight text-ink mb-4">
                 About
-              </h1>
+              </h2>
               <p className="font-sans text-base text-ink/70 leading-relaxed mb-8 max-w-xl">
                 The complete blueprint of my engineering identity, core
                 philosophy, and offline background processes.
@@ -104,7 +104,7 @@ export default function About() {
               {/* SECTION 1: OVERVIEW */}
               <motion.section
                 id="overview"
-                className="doc-section scroll-mt-28 mb-20"
+                className="doc-section scroll-mt-12 mb-20"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, margin: "-100px" }}
@@ -151,7 +151,7 @@ export default function About() {
               {/* SECTION 2: PHILOSOPHY */}
               <motion.section
                 id="philosophy"
-                className="doc-section scroll-mt-28 mb-20"
+                className="doc-section scroll-mt-12 mb-20"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, margin: "-100px" }}
@@ -161,7 +161,7 @@ export default function About() {
                   Architectural Philosophy
                 </h2>
                 <p className="font-sans text-base text-ink/80 leading-relaxed mb-8">
-                  I don't just write code that compilers understand; I write
+                  I don&apos;t just write code that compilers understand; I write
                   code that humans can maintain. My methodology is anchored on
                   three strict principles:
                 </p>
@@ -188,7 +188,7 @@ export default function About() {
               {/* SECTION 3: BACKGROUND */}
               <motion.section
                 id="background"
-                className="doc-section scroll-mt-28"
+                className="doc-section scroll-mt-12"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, margin: "-100px" }}
@@ -252,7 +252,7 @@ export default function About() {
                 </div>
               </motion.section>
             </div>
-          </main>
+          </div>
 
           <RightSidebar activeSection={activeSection} />
         </div>

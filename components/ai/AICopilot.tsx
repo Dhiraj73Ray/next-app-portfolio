@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { site } from "../../data/siteConfig";
 
 const RADIAL_ITEMS = [
   { id: "chat", label: "CHAT" },
@@ -35,6 +36,7 @@ export default function AICopilot() {
   const [isHovered, setIsHovered] = useState(false);
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
+  const rootRef = useRef<HTMLDivElement>(null);
 
   const sliceAngle = 360 / RADIAL_ITEMS.length;
 
@@ -53,10 +55,36 @@ export default function AICopilot() {
     }
   };
 
+  // Touch par "mouse leave" hota hi nahi, isliye bahar tap karo toh radial band
+  useEffect(() => {
+    const onDown = (e: PointerEvent) => {
+      if (!rootRef.current?.contains(e.target as Node)) setIsHovered(false);
+    };
+    document.addEventListener("pointerdown", onDown);
+    return () => document.removeEventListener("pointerdown", onDown);
+  }, []);
+
+  // Slice click: chat panel kholta hai, baaki items us section par le jaate hain
+  const choose = (id: string) => {
+    if (id === "chat") {
+      setSelectedOption("chat");
+      return;
+    }
+    setHoveredItem(null);
+    setIsHovered(false);
+    if (id === "resume" && site.resume) {
+      window.open(site.resume, "_blank", "noopener");
+      return;
+    }
+    const target = id === "resume" ? "contact" : id; // resume file set nahi hai toh contact par
+    document.getElementById(target)?.scrollIntoView(); // globals.css ka smooth + nav offset follow karta hai
+  };
+
   return (
     <div
-      className={`fixed bottom-8 right-8 z-50 transition-all duration-300 ${
-        isHovered || selectedOption ? "w-80 h-96" : "w-auto h-auto"
+      ref={rootRef}
+      className={`fixed bottom-4 right-4 md:bottom-8 md:right-8 z-50 transition-all duration-300 ${
+        isHovered || selectedOption ? "w-80 h-96 max-w-[calc(100vw-2rem)]" : "w-auto h-auto"
       }`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={handleMouseLeave}
@@ -103,7 +131,7 @@ export default function AICopilot() {
                       className="transition-colors duration-150 cursor-pointer"
                       onMouseEnter={() => setHoveredItem(item.id)}
                       onMouseLeave={() => setHoveredItem(null)}
-                      onClick={() => setSelectedOption(item.id)}
+                      onClick={() => choose(item.id)}
                     />
                     <text
                       x="100"
@@ -133,10 +161,10 @@ export default function AICopilot() {
             initial={{ opacity: 0, scale: 0.8, y: 20, x: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0, x: 0 }}
             // THIS IS THE FIX: Force it to shrink to the bottom-right corner
-            exit={{ opacity: 0, scale: 0.5, y: 100, x: 100 }} 
+            exit={{ opacity: 0, scale: 0.5, y: 100, x: 100 }}
             transition={{ duration: 0.3, ease: [0.2, 0, 0, 1] }}
             style={{ transformOrigin: "bottom right" }} // Force origin
-            className="absolute bottom-0 right-0 w-80 h-96 bg-cream border-2 border-ink flex flex-col origin-bottom-right"
+            className="absolute bottom-0 right-0 w-80 max-w-[calc(100vw-2rem)] h-96 bg-cream border-2 border-ink flex flex-col origin-bottom-right"
           >
             {/* Header */}
             <div className="flex justify-between items-center border-b-2 border-ink p-3 bg-cream">
@@ -145,7 +173,7 @@ export default function AICopilot() {
               </span>
               <button
                 onClick={handleClose}
-                className="font-mono text-xs text-ink hover:text-burnt transition-colors"
+                className="font-mono text-xs text-ink hover:text-burnt transition-colors cursor-pointer"
               >
                 [ X ]
               </button>
@@ -153,15 +181,18 @@ export default function AICopilot() {
             {/* Body */}
             <div className="flex-1 p-4 overflow-y-auto font-sans text-sm bg-cream">
               <p className="text-ink/80">
-                Ask me anything about my {selectedOption}...
+                The AI assistant is coming soon. Until then, hover the [ AI ] button and pick a slice
+                to jump straight to any section.
               </p>
             </div>
-            {/* Input */}
+            {/* Input (backend ready hone tak disabled) */}
             <div className="border-t-2 border-ink p-3 bg-cream">
               <input
                 type="text"
-                placeholder="Type here..."
-                className="w-full bg-transparent border-none outline-none font-sans text-sm text-ink placeholder:text-ink/40"
+                disabled
+                aria-label="AI chat (coming soon)"
+                placeholder="Chat is coming soon..."
+                className="w-full bg-transparent border-none outline-none font-sans text-sm text-ink placeholder:text-ink/40 cursor-not-allowed"
               />
             </div>
           </motion.div>

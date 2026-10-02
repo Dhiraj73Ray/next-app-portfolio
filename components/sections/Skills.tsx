@@ -5,10 +5,7 @@ import "rush-hour-skills/style.css";
 
 export default function Skills() {
   return (
-    <section
-      id="skills"
-      // className="scroll-mt-5"
-    >
+    <section id="skills">
       <StackLayout />
     </section>
   );

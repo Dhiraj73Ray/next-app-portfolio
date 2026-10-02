@@ -4,6 +4,7 @@ export interface SiteConfig {
   name: string;
   role: string;
   tagline: string;
+  focus: string; // short line for the Hero meta box
   url: string;
   email: string;
   location: string;

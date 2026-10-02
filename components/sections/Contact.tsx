@@ -9,10 +9,12 @@ export default function Contact({ data = defaultSite }: { data?: SiteConfig }) {
   const open = data.availability.open;
 
   return (
-    <section id="contact" className="relative bg-cream px-6 py-24 md:px-16 border-b-4 border-ink">
+    <section id="contact" className="relative bg-cream px-6 py-16 md:px-16 lg:py-24 border-b-4 border-ink">
       <div className="mx-auto max-w-7xl grid gap-14 lg:grid-cols-12">
-        {/* LEFT */}
-        <div className="lg:col-span-5">
+        <h2 className="sr-only lg:hidden">Contact</h2>
+
+        {/* LEFT: sirf desktop par. Mobile par sirf form (email/socials Footer mein hain) */}
+        <div className="hidden lg:block lg:col-span-5">
           <span className="block font-mono text-xs uppercase tracking-widest text-ink mb-3">
             [ 05 — CONTACT ]
           </span>
