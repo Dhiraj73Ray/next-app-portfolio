@@ -64,7 +64,7 @@ export default function Footer({ data = defaultSite }: { data?: SiteConfig }) {
           <span>
             © {year} {data.name}
           </span>
-          <span>Built with Next.js, Tailwind and Framer Motion</span>
+          <span>Built with Next.js, Tailwind and Framer Motion, ShadcnUI</span>
           <BackToTop />
         </div>
 

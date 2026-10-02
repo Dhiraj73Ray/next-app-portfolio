@@ -1,8 +1,8 @@
 "use client";
 
-import { useState, type ChangeEvent, type FormEvent, type ReactNode } from "react";
+import { useState, useEffect, type ChangeEvent, type FormEvent, type ReactNode } from "react";
 import { motion, useReducedMotion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Check, Copy } from "lucide-react";
 
 interface Props {
   email: string;
@@ -10,7 +10,7 @@ interface Props {
 }
 
 type Status = "idle" | "sending" | "sent" | "mailto" | "error";
-type Field = "name" | "email" | "message";
+type Field = "name" | "email" | "phone" | "message" | "subject";
 type Errors = Partial<Record<Field, string>>;
 
 /* Form backend (optional): .env.local mein daalo
@@ -53,15 +53,57 @@ function FieldWrap({
 export default function ContactForm({ email, topics }: Props) {
   const reduce = useReducedMotion();
   const [topic, setTopic] = useState(topics[0] ?? "");
-  const [values, setValues] = useState({ name: "", email: "", message: "" });
+  const [values, setValues] = useState({ name: "", email: "", phone: "", message: "", subject: "" });
   const [errors, setErrors] = useState<Errors>({});
   const [status, setStatus] = useState<Status>("idle");
+  const [countdown, setCountdown] = useState(7);
+  const [copied, setCopied] = useState(false);
+
+  const copy = async () => {
+    try {
+      await navigator.clipboard.writeText(email);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1800);
+    } catch {
+      window.location.href = `mailto:${email}`; // clipboard block ho toh mail app khol do
+    }
+  };
+
+   const done = status === "sent" || status === "mailto";
+ 
+
+  // 5-second countdown & auto reset
+  useEffect(() => {
+    if (!done) return;
+
+    setCountdown(7);
+
+    const interval = setInterval(() => {
+      setCountdown((prev) => {
+        if (prev <= 1) {
+          clearInterval(interval);
+          reset();
+          return 7;
+        }
+        return prev - 1;
+      });
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [done]);
 
   const onChange =
     (key: Field) => (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
       setValues((v) => ({ ...v, [key]: e.target.value }));
       if (errors[key]) setErrors((er) => ({ ...er, [key]: undefined }));
     };
+
+    const reset = () => {
+    setValues({ name: "", email: "",phone: "", message: "", subject: "" });
+    setErrors({});
+    setStatus("idle");
+    setCountdown(7);
+  };
 
   const validate = (): Errors => {
     const er: Errors = {};
@@ -71,11 +113,6 @@ export default function ContactForm({ email, topics }: Props) {
     return er;
   };
 
-  const reset = () => {
-    setValues({ name: "", email: "", message: "" });
-    setErrors({});
-    setStatus("idle");
-  };
 
   const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -90,14 +127,29 @@ export default function ContactForm({ email, topics }: Props) {
     setErrors(er);
     if (Object.keys(er).length) return;
 
-    const subject = `[Portfolio] ${topic} from ${values.name.trim()}`;
+    const subject = `[Portfolio] ${topic} - {" "} ${values.subject ? values.subject.trim() : ''} from ${values.name.trim()}`;
 
     if (!ENDPOINT) {
-      const body = `${values.message.trim()}\n\n— ${values.name.trim()} (${values.email.trim()})`;
-      window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      setStatus("mailto");
-      return;
-    }
+  const body = `
+  ${values.message.trim()}
+
+  Name: ${values.name.trim()}
+Email: ${values.email.trim()}
+{values.phone && (
+  Phone: {values.phone.trim() || "Not provided"}
+)}
+
+`;
+  
+  // Construct direct Gmail web compose URL
+  const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(email)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+  // Open Gmail compose tab in browser
+  window.open(gmailUrl, "_blank", "noopener,noreferrer");
+  
+  setStatus("mailto");
+  return;
+}
 
     setStatus("sending");
     try {
@@ -120,7 +172,8 @@ export default function ContactForm({ email, topics }: Props) {
     }
   };
 
-  const done = status === "sent" || status === "mailto";
+
+  
 
   return (
     <div className="relative border-2 border-ink bg-cream p-6 md:p-8 shadow-[8px_8px_0_0_#1A1A1A]">
@@ -132,35 +185,62 @@ export default function ContactForm({ email, topics }: Props) {
 
       {/* slip header */}
       <div className="flex items-center justify-between gap-4 border-b-2 border-dashed border-ink pb-3 mb-6 font-mono text-xs text-ink">
-        <span className="truncate">To: {email}</span>
+        <div className="flex flex-wrap items-center gap-3">
+          <span className="text-lg sm:text-sm">To :</span>
+      <a
+        href={`mailto:${email}`}
+        className="font-serif text-lg sm:text-sm text-ink break-all underline decoration-burnt decoration-[3px] underline-offset-[6px] hover:text-burnt transition-colors"
+      >
+        {email}
+      </a>
+      <button
+        type="button"
+        onClick={copy}
+        className="inline-flex items-center gap-2 border-2 border-ink px-3 py-1.5 font-mono text-xs text-ink hover:bg-ink hover:text-cream transition-colors cursor-pointer"
+      >
+        {copied ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
+        {copied ? "Copied" : "Copy"}
+      </button>
+      <span className="sr-only" aria-live="polite">
+        {copied ? "Email copied to clipboard" : ""}
+      </span>
+    </div>
         <span className="shrink-0 text-olive">Re: {topic || "—"}</span>
       </div>
 
       {done ? (
-        <div role="status" className="min-h-[420px] flex flex-col items-start justify-center gap-6">
-          <motion.div
-            className="border-4 border-burnt px-5 py-2 font-mono text-2xl font-bold uppercase tracking-widest text-burnt"
-            style={{ rotate: -8 }}
-            initial={reduce ? false : { scale: 2.4, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ type: "spring", stiffness: 420, damping: 18 }}
-          >
-            {status === "sent" ? "Sent" : "Ready"}
-          </motion.div>
-          <p className="max-w-sm font-sans text-base text-ink/80 leading-relaxed">
-            {status === "sent"
-              ? `Thanks${values.name ? `, ${values.name.split(" ")[0]}` : ""}. I'll reply to ${values.email || "you"} soon.`
-              : `Your mail app should open with the message filled in. If nothing opens, email me at ${email}.`}
-          </p>
-          <button
-            type="button"
-            onClick={reset}
-            className="font-mono text-xs uppercase tracking-widest text-ink border-b border-ink pb-0.5 hover:text-burnt hover:border-burnt transition-colors cursor-pointer"
-          >
-            Write another
-          </button>
-        </div>
-      ) : (
+  <div role="status" className="min-h-[420px] flex flex-col items-start justify-center gap-6">
+    <motion.div
+      className="border-4 border-burnt px-5 py-2 font-mono text-2xl font-bold uppercase tracking-widest text-burnt"
+      style={{ rotate: -8 }}
+      initial={reduce ? false : { scale: 2.4, opacity: 0 }}
+      animate={{ scale: 1, opacity: 1 }}
+      transition={{ type: "spring", stiffness: 420, damping: 18 }}
+    >
+      {status === "sent" ? "Sent" : "Ready"}
+    </motion.div>
+
+    <p className="max-w-sm font-sans text-base text-ink/80 leading-relaxed">
+      {status === "sent"
+        ? `Thanks${values.name ? `, ${values.name.split(" ")[0]}` : ""}. I'll reply to ${values.email || "you"} soon.`
+        : `Gmail opened in a new tab with your message ready. If it didn't open, reach out at ${email}.`}
+    </p>
+
+    {/* Button + Countdown label */}
+    <div className="flex items-center gap-3">
+      <button
+        type="button"
+        onClick={reset}
+        className="font-mono text-xs uppercase tracking-widest text-ink border-b border-ink pb-0.5 hover:text-burnt hover:border-burnt transition-colors cursor-pointer"
+      >
+        Write another
+      </button>
+      <span className="font-mono text-xs text-ink/50">
+        in {countdown}s...
+      </span>
+    </div>
+  </div>
+) : (
         <form onSubmit={onSubmit} noValidate className="space-y-6">
           <fieldset>
             <legend className="font-mono text-xs text-olive mb-2">What is this about?</legend>
@@ -213,6 +293,30 @@ export default function ContactForm({ email, topics }: Props) {
                 placeholder="jane@company.com"
               />
             </FieldWrap>
+            <FieldWrap id="cf-phone" label="Contact number (optional)" error={errors.phone}>
+  <input
+    id="cf-phone"
+    name="phone"
+    type="tel"
+    autoComplete="tel"
+    value={values.phone}
+    onChange={onChange("phone")}
+    className={lineInput}
+    placeholder="+91 98765 43210"
+  />
+</FieldWrap>
+            <FieldWrap id="cf-subject" label="Subject (optional)" error={errors.subject}>
+  <input
+    id="cf-subject"
+    name="subject"
+    type="text"
+    autoComplete="text"
+    value={values.subject}
+    onChange={onChange("subject")}
+    className={lineInput}
+    placeholder=""
+  />
+</FieldWrap>
           </div>
 
           <FieldWrap id="cf-message" label="Message" error={errors.message}>

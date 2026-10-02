@@ -1,19 +1,20 @@
 {
-  "name": "Aarav Sharma",
+  "name": "Dhiraj Ray",
   "role": "Full-Stack Developer & ECE Engineer",
-  "tagline": "I build systems that connect hardware, data, and AI.",
-  "location": "Bengaluru, India",
-  "availability": "Open to internships & full-time roles",
-  "email": "aarav.sharma@example.com",
+  "tagline": "I build systems that connect Software, Data, Hardware, and AI.",
+  "location": "Thane, India",
+  "availability": "Open to Internships & Full-time Opportunites",
+  "email": "raydj987abc@gmail.com",
   "socials": {
-    "github": "https://github.com/aaravsharma",
-    "linkedin": "https://linkedin.com/in/aaravsharma",
-    "twitter": "https://twitter.com/aaravsharma"
+    "github": "https://github.com/dhiraj73ray",
+    "linkedin": "https://linkedin.com/in/dhirajray",
+    "twitter": "https://twitter.com/dhiraj73ray",
+    "instagram": "https://www.instagram.com/dhiraj73ray/"
   },
   "resumeUrl": "/resume.pdf",
   "about": {
-    "short": "Fresher developer with a strong foundation in Python, React, and embedded systems. I love building products that bridge the physical and digital worlds.",
-    "long": "I'm an Electronics and Communication Engineering graduate who fell in love with software. Over the past two years I've built full-stack apps, IoT prototypes, and AI tools. I'm comfortable from PCB to PostgreSQL, from Arduino to AWS. Currently exploring VLSI design and edge AI.",
+    "short": "Fresher developer with a strong foundation in Python, React, and AI & ML. I love building products that bridge the physical and digital worlds.",
+    "long": "I'm an Electronics and Communication Engineering graduate who fell in love with software. Over the past two years I've built full-stack apps, IoT prototypes, and AI tools. I'm comfortable from PCB to PostgreSQL, from Arduino to AWS. Currently exploring Latest Frontend technology and edge AI.",
     "facts": [
       {
         "label": "Focus",
@@ -21,28 +22,28 @@
       },
       {
         "label": "Currently Learning",
-        "value": "VLSI Design, Rust"
+        "value": "Next.js, Typescript"
       },
       {
         "label": "Languages",
-        "value": "English, Hindi, Kannada"
+        "value": "English, Hindi, Japaneese(Novice)"
       }
     ],
     "philosophy": [
       {
         "id": "01",
-        "title": "The Clean Layer Obsession",
-        "description": "Designing backend structures and API interfaces that are intuitive, scalable, and ruthlessly efficient."
+        "title": "Build Clean",
+        "description": "Fast endpoints, clear architecture, zero bloat. If it doesn't add value, it doesn't belong in the codebase."
       },
       {
         "id": "02",
-        "title": "Aggressive Automation",
-        "description": "If a task has to be done manually more than twice, it deserves a script. I build automation layers to handle the mundane, freeing mental bandwidth for complex architecture."
+        "title": "Don't Do It Twice",
+        "description": "Computers are built for boring work. I automate repetitive tasks so humans can solve the hard problems."
       },
       {
         "id": "03",
-        "title": "The Translation Engine",
-        "description": "High-level engineering is useless if it lives in an ivory tower. I distill dense, abstract technical concepts into plain, transparent ideas that anyone can immediately execute on."
+        "title": "No Ivory Towers",
+        "description": "Code is built for people. I write clear documentation and design APIs that make life easy for whoever touches them next."
       }
     ],
     "background": {
@@ -61,9 +62,10 @@
         "status": "active",
         "up_time": "24/7",
         "fuel_sources": [
-          "ambient_lofi",
-          "2am_tech_forums",
-          "workflow_rhythm"
+          "mechanical_keyboard_switches",
+          "dark_mode_everything",
+          "zero_warning_compiles",
+          "flow_state"
         ]
       }
     }

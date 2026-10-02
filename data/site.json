@@ -1,18 +1,20 @@
 {
-  "name": "Aarav Sharma",
+  "name": "Dhiraj Ray",
   "role": "Full-Stack Developer & ECE Engineer",
-  "tagline": "I build systems that connect hardware, data, and AI.",
+  "tagline": "I build systems that connect Software, Data, Hardware, and AI.",
   "focus": "Full-Stack + AI",
   "url": "https://your-domain.com",
-  "email": "hello@your-domain.com",
-  "location": "Bengaluru, India",
+  "email": "raydj987abc@gmail.com",
+  "location": "Thane, India",
   "timezone": "Asia/Kolkata",
-  "availability": { "open": true, "label": "Open to roles and freelance work" },
+  "availability": { "open": true, "label": "Open to Internships & Full-time Opportunites" },
+  
   "responseTime": "Usually within a day",
-  "resume": "",
+  "resume": "/resume.pdf",
   "socials": [
     { "label": "GitHub", "url": "https://github.com/your-handle" },
-    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/your-handle" }
+    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/your-handle" },
+    { "label": "Instagram", "url": "https://www.instagram.com/dhiraj73ray/" }
   ],
   "nav": [
     { "label": "About", "href": "#about" },
