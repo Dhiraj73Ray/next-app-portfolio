@@ -58,25 +58,26 @@ body {
 
 /* ===== rush-hour-skills theme =====
    Package ke --rhs-* variables ko portfolio ke palette par map kiya hai.
-   "#skills" se shuru hone ki wajah se ye package ke apne theme rules (.rhs-section[data-theme=...])
-   par hamesha jeet-ta hai, import order se farak nahi padta.
-   Naya palette chahiye? Sirf neeche ke variables badlo. */
+   "#skills" se shuru hone ki wajah se ye package ke apne theme rules par hamesha jeet-ta hai.
+   Palette badalna ho toh sirf neeche ke colours badlo. */
 #skills .rhs-section {
   --rhs-bg: transparent;
   --rhs-text: var(--black);
   --rhs-muted: var(--olive);
-  --rhs-panel-gradient: #ede6d8;
-  --rhs-panel-border: var(--black);
-  --rhs-tray-bg: #ddd5c3;
-  --rhs-tray-shadow: inset 0 2px 0 rgba(26, 26, 26, 0.18);
-  --rhs-preview-tray-bg: #ddd5c3;
+  --rhs-panel-gradient: #f4efe6;
+  --rhs-panel-border: rgba(26, 26, 26, 0.55);
+  --rhs-tray-bg: #e6dfce;
+  --rhs-tray-shadow: inset 0 0 0 1px rgba(26, 26, 26, 0.12);
+  --rhs-preview-tray-bg: #e6dfce;
   --rhs-btn-bg: transparent;
   --rhs-btn-bg-hover: rgba(217, 83, 30, 0.12);
-  --rhs-btn-border: var(--black);
+  --rhs-btn-border: rgba(26, 26, 26, 0.55);
   --rhs-accent: var(--orange);
   --rhs-success: var(--olive);
   --rhs-dot-bg: rgba(26, 26, 26, 0.2);
-  --rhs-block-dark-overlay: rgba(26, 26, 26, 0.94);
+  /* Locked cars = sand. Reveal par jo rang andar se khulta hai (orange / olive) isse alag dikhna chahiye,
+     tabhi circle-wipe animation nazar aata hai. */
+  --rhs-block-dark-overlay: #c9bfa8;
   --rhs-preview-piece-bg: var(--olive);
   --rhs-preview-main-bg: var(--orange);
   --rhs-lock-bg: rgba(244, 239, 230, 0.88);
@@ -84,15 +85,25 @@ body {
   font-family: var(--font-sans);
 }
 
-/* Package mein hardcoded cheezein (colors/radius/font) */
-#skills .rhs-block-main { background: var(--orange); }
-#skills .rhs-block-obstacle { background: var(--black); }
-#skills .rhs-exit-slot { background: var(--orange); animation: none; box-shadow: 0 0 0 2px var(--black); }
+/* Package mein hardcoded cheezein */
+#skills .rhs-block-main {background: var(--orange) !important;}
+#skills .rhs-block-main::before,
+#skills .rhs-block-main::after,
+#skills .rhs-block-main .rhs-overlay {
+  display: none !important;
+  opacity: 0 !important;
+}
+#skills .rhs-block-obstacle { background: var(--olive); }
+#skills .rhs-exit-slot { background: var(--orange); animation: none; box-shadow: 0 0 0 2px rgba(217, 83, 30, 0.35); }
 #skills .rhs-block,
 #skills .rhs-board,
 #skills .rhs-board-frame,
-#skills .rhs-preview-frame { border-radius: 0; }
-#skills .rhs-block { outline: 2px solid var(--black); outline-offset: -2px; }
+#skills .rhs-preview-frame { border-radius: 10; }
+#skills .rhs-block { outline: 1.5px solid rgba(26, 26, 26, 0.7); outline-offset: -1.5px; }
+#skills .rhs-block-bright { box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.18); }
+/* Selected / drag feedback: package ka white ring cream par dikhta nahi */
+#skills .rhs-block-selected { box-shadow: 0 0 0 2px var(--orange), 0 6px 14px rgba(26, 26, 26, 0.25); }
+#skills .rhs-block-dragging { box-shadow: 0 0 0 2px var(--black), 0 12px 22px rgba(26, 26, 26, 0.3); }
 #skills .rhs-skill-label {
   font-family: var(--font-mono);
   color: var(--cream);

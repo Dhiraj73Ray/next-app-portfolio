@@ -46,6 +46,27 @@ export const Projects: React.FC = () => {
     return () => window.removeEventListener("resize", updateCue);
   }, [updateCue, activeCategory]);
 
+  /* Scroll hand-off: list ke top/bottom par pahunch ke aage ka scroll page ko do (upar bhi, neeche bhi).
+     Browser ka apna chaining "latch" ho jaata hai, isliye yahan manually pass karte hain. */
+  useEffect(() => {
+    const el = listRef.current;
+    if (!el) return;
+    const onWheel = (e: WheelEvent) => {
+      if (e.ctrlKey || Math.abs(e.deltaY) < Math.abs(e.deltaX)) return; // pinch-zoom / sideways
+      const max = el.scrollHeight - el.clientHeight;
+      if (max <= 1) return; // list scroll hi nahi hoti: browser page ko scroll kar dega
+      const atTop = el.scrollTop <= 0;
+      const atBottom = el.scrollTop >= max - 1;
+      if ((e.deltaY < 0 && atTop) || (e.deltaY > 0 && atBottom)) {
+        e.preventDefault();
+        const unit = e.deltaMode === 1 ? 16 : e.deltaMode === 2 ? window.innerHeight : 1;
+        window.scrollBy({ top: e.deltaY * unit, behavior: "instant" });
+      }
+    };
+    el.addEventListener("wheel", onWheel, { passive: false });
+    return () => el.removeEventListener("wheel", onWheel);
+  }, []);
+
   const changeCategory = (key: string) => {
     setActiveCategory(key);
     const first = filterProjects(key)[0];
@@ -92,7 +113,7 @@ export const Projects: React.FC = () => {
                 ref={listRef}
                 onScroll={updateCue}
                 onMouseLeave={endPreview}
-                className="h-[440px] lg:h-full overflow-y-auto overscroll-contain grid grid-cols-1 sm:grid-cols-2 content-start"
+                className="h-[440px] lg:h-full overflow-y-auto grid grid-cols-1 sm:grid-cols-2 content-start"
                 style={{ scrollbarWidth: "thin", scrollbarColor: "var(--orange) transparent" }}
               >
                 {filteredProjects.map((project, index) => (
