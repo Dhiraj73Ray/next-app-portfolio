@@ -232,6 +232,7 @@ export default function Cursor() {
                   y2={-armOuter}
                   stroke={color}
                   strokeLinecap="square"
+                  strokeWidth={STROKE_DEFAULT}
                   animate={{
                     y1: -armInner,
                     y2: -armOuter,
@@ -248,6 +249,7 @@ export default function Cursor() {
                   y2={armOuter}
                   stroke={color}
                   strokeLinecap="square"
+                  strokeWidth={STROKE_DEFAULT}
                   animate={{
                     y1: armInner,
                     y2: armOuter,
@@ -263,6 +265,7 @@ export default function Cursor() {
                   x2={-armOuter}
                   stroke={color}
                   strokeLinecap="square"
+                  strokeWidth={STROKE_DEFAULT}
                   animate={{
                     x1: -armInner,
                     x2: -armOuter,
@@ -278,6 +281,7 @@ export default function Cursor() {
                   x2={armOuter}
                   stroke={color}
                   strokeLinecap="square"
+                  strokeWidth={STROKE_DEFAULT}
                   animate={{
                     x1: armInner,
                     x2: armOuter,
