@@ -455,7 +455,7 @@ const TechText = ({
       const y1 = crisp(frame.y1);
       const x2 = crisp(frame.x2);
       const y2 = crisp(frame.y2);
-      const DRAG_PAD = 200;
+      const DRAG_PAD = 650;
       ctx.setTransform(dpr, 0, 0, dpr, DRAG_PAD * dpr, DRAG_PAD * dpr);
 
       const moved = Math.hypot(glyph.offset.x, glyph.offset.y);
@@ -597,7 +597,7 @@ const TechText = ({
 
       if (s.draggable) container.style.cursor = dragging >= 0 ? 'grabbing' : focus >= 0 && pointer.inside ? 'grab' : '';
 
-      const DRAG_PAD = 200;
+      const DRAG_PAD = 650;
       // 1. Clear the entire padded canvas
       ctx.setTransform(1, 0, 0, 1, 0, 0);
       ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -641,7 +641,7 @@ const TechText = ({
     };
     wakeRef.current = wake;
 
-    const DRAG_PAD = 200; // 120px of extra drag room
+    const DRAG_PAD = 650; // 120px of extra drag room
     const resize = () => {
       width = Math.max(1, container.clientWidth);
       height = Math.max(1, container.clientHeight);

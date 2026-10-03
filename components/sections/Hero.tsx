@@ -32,7 +32,7 @@ export default function Hero({ data = defaultSite }: { data?: SiteConfig }) {
   };
 
   return (
-    <section className="relative z-0 min-h-[calc(100vh-64px)] flex flex-col justify-between pt-24 pb-8 px-6 md:pt-28 md:px-16 border-b-2 border-ink">
+    <section className="relative z-0 min-h-[calc(100vh-64px)] flex flex-col justify-between pt-24 pb-8 px-6 md:pt-28 md:px-16 border-b-2 border-ink overflow-hidden">
       
       {/* Top Bar / Mono Label */}
       <div className="font-mono text-xs md:text-sm uppercase tracking-widest text-ink mb-4">

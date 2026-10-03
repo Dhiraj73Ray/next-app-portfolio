@@ -9,7 +9,7 @@ import Welcome from "@/components/sections/Welcome";
 export default function Home() {
   return (
     <main id="main">
-      {/* <Welcome /> */}
+      <Welcome />
       <Hero />
       <About />
       <Skills />

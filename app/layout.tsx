@@ -6,6 +6,7 @@ import AICopilot from "../components/ai/AICopilot";
 import Footer from "../components/layout/Footer";
 import { site } from "../data/siteConfig";
 import { cn } from "@/lib/utils";
+import Cursor from "@/components/ui/Cursor";
 
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
@@ -43,6 +44,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         >
           Skip to content
         </a>
+        <Cursor/>
         <Navbar />
         {children}
         <Footer />

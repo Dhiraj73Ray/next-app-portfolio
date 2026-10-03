@@ -235,3 +235,18 @@ body {
     @apply font-sans;
   }
 }
+
+
+/* Custom cursor — only on precise pointers, keyboard users untouched */
+@media (hover: hover) and (pointer: fine) {
+  html, body, a, button, [role="button"] {
+    cursor: none;
+  }
+}
+
+
+@media (hover: hover) and (pointer: fine) {
+  *, *::before, *::after {
+    cursor: none !important;
+  }
+}
