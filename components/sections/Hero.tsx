@@ -1,12 +1,11 @@
 // frontend/components/sections/Hero.tsx
 "use client";
 
-import { site } from "../../data/siteConfig";
-import { site as defaultSite, type SiteConfig } from "../../data/siteConfig";
+import { site, type SiteConfig } from "../../data/siteConfig";
 import { ArrowUpRight, Download } from "lucide-react";
 import TechText from "../hero/TechText";
 
-export default function Hero({ data = defaultSite }: { data?: SiteConfig }) {
+export default function Hero({ data = site }: { data?: SiteConfig }) {
   const [first, ...rest] = site.name.split(" ");
   const open = data.availability.open;
 

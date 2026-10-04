@@ -3,7 +3,8 @@
 import { useState, useEffect } from "react";
 import { motion, type Variants } from "framer-motion";
 import { LeftSidebar, RightSidebar } from "../about/AboutSidebar";
-import profile from "../../data/profile.json";
+// import site from "../../data/site.json";
+import { site } from "../../data/siteConfig";
 
 export default function About() {
   const [activeSection, setActiveSection] = useState("overview");
@@ -50,16 +51,16 @@ export default function About() {
         {/* Bio */}
         <div className="space-y-5 mb-10">
           <p className="font-sans text-base leading-relaxed text-ink">
-            {profile.about.long}
+            {site.about.long}
           </p>
           <p className="font-sans text-base leading-relaxed text-ink">
-            {profile.about.short}
+            {site.about.short}
           </p>
         </div>
 
         {/* Facts */}
         <ul className="border-t-2 border-ink pt-4 space-y-4">
-          {profile.about.facts.map(
+          {site.about.facts.map(
             (fact: { label: string; value: string }) => (
               <li
                 key={fact.label}
@@ -114,7 +115,7 @@ export default function About() {
                   Overview
                 </h2>
                 <p className="font-sans text-base text-ink/80 leading-relaxed mb-6">
-                  {profile.about.long}
+                  {site.about.long}
                 </p>
 
                 <div className="border-l-4 border-burnt border-y border-r border-ink bg-cream p-5 my-8">
@@ -125,12 +126,12 @@ export default function About() {
                     <strong className="text-ink font-medium">
                       Core Concept:{" "}
                     </strong>
-                    {profile.about.short}
+                    {site.about.short}
                   </p>
                 </div>
 
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4 mt-8 pt-6 border-t border-ink/20">
-                  {profile.about.facts.map(
+                  {site.about.facts.map(
                     (fact: { label: string; value: string }) => (
                       <li
                         key={fact.label}
@@ -167,7 +168,7 @@ export default function About() {
                 </p>
 
                 <ul className="space-y-6">
-                  {profile.about.philosophy.map((item) => (
+                  {site.about.philosophy.map((item) => (
                     <li key={item.id} className="flex gap-5 items-start">
                       <span className="font-mono text-[10px] border border-ink text-ink px-2 py-1 mt-0.5 flex-shrink-0">
                         {item.id}
@@ -198,10 +199,10 @@ export default function About() {
                   Background Processes
                 </h2>
                 <p className="font-sans text-base text-ink/80 leading-relaxed mb-8">
-                  {profile.about.background.intro}
+                  {site.about.background.intro}
                 </p>
 
-                {profile.about.background.sections.map((section) => (
+                {site.about.background.sections.map((section) => (
                   <div key={section.title} className="mb-6">
                     <h3 className="font-sans text-base font-medium text-ink mb-2">
                       {section.title}
@@ -221,16 +222,16 @@ export default function About() {
                       {"{\n  "}
                       <span className="text-burnt">"status"</span>:{" "}
                       <span className="text-[#A3E635]">
-                        "{profile.about.background.runtime.status}"
+                        "{site.about.background.runtime.status}"
                       </span>
                       {",\n  "}
                       <span className="text-burnt">"up_time"</span>:{" "}
                       <span className="text-[#A3E635]">
-                        "{profile.about.background.runtime.up_time}"
+                        "{site.about.background.runtime.up_time}"
                       </span>
                       {",\n  "}
                       <span className="text-burnt">"fuel_sources"</span>: [
-                      {profile.about.background.runtime.fuel_sources.map(
+                      {site.about.background.runtime.fuel_sources.map(
                         (source, i) => (
                           <span key={source}>
                             {"\n    "}
@@ -238,7 +239,7 @@ export default function About() {
                               "{source}"
                             </span>
                             {i <
-                            profile.about.background.runtime.fuel_sources
+                            site.about.background.runtime.fuel_sources
                               .length -
                               1
                               ? ","

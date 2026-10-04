@@ -8,7 +8,64 @@
   "location": "Thane, India",
   "timezone": "Asia/Kolkata",
   "availability": { "open": true, "label": "Open to Internships & Full-time Opportunites" },
-  
+  "about": {
+    "short": "Fresher developer with a strong foundation in Python, React, and AI & ML. I love building products that bridge the physical and digital worlds.",
+    "long": "I'm an Electronics and Communication Engineering graduate who fell in love with software. Over the past two years I've built full-stack apps, IoT prototypes, and AI tools. I'm comfortable from PCB to PostgreSQL, from Arduino to AWS. Currently exploring Latest Frontend technology and edge AI.",
+    "facts": [
+      {
+        "label": "Focus",
+        "value": "Full-Stack + AI + IoT"
+      },
+      {
+        "label": "Currently Learning",
+        "value": "Next.js, Typescript"
+      },
+      {
+        "label": "Languages",
+        "value": "English, Hindi, Japaneese(Novice)"
+      }
+    ],
+    "philosophy": [
+      {
+        "id": "01",
+        "title": "Build Clean",
+        "description": "Fast endpoints, clear architecture, zero bloat. If it doesn't add value, it doesn't belong in the codebase."
+      },
+      {
+        "id": "02",
+        "title": "Don't Do It Twice",
+        "description": "Computers are built for boring work. I automate repetitive tasks so humans can solve the hard problems."
+      },
+      {
+        "id": "03",
+        "title": "No Ivory Towers",
+        "description": "Code is built for people. I write clear documentation and design APIs that make life easy for whoever touches them next."
+      }
+    ],
+    "background": {
+      "intro": "When the IDE is closed, my brain doesn't stop optimizing. The same mindset that drives my code runs my personal world.",
+      "sections": [
+        {
+          "title": "Strategic Sandboxes & Tacticals",
+          "content": "I view gaming through an engineering lens. Whether I am architecting complex automated systems in Minecraft survival or executing tight, calculated rotations with a team in BGMI, it's all optimization and risk management under a different skin."
+        },
+        {
+          "title": "Structural Storytelling",
+          "content": "I have a deep appreciation for the high-stakes narrative scales and razor-sharp character designs found in modern manga and anime. Analyzing the tactical depth of Jujutsu Kaisen or the absolute scale of One-Punch Man satisfies my love for brilliant, creative world-building."
+        }
+      ],
+      "runtime": {
+        "status": "active",
+        "up_time": "24/7",
+        "fuel_sources": [
+          "mechanical_keyboard_switches",
+          "dark_mode_everything",
+          "zero_warning_compiles",
+          "flow_state"
+        ]
+      }
+    }
+  },
   "responseTime": "Usually within a day",
   "resume": "/resume.pdf",
   "socials": [
