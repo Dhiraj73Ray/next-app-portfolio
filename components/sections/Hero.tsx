@@ -5,6 +5,7 @@ import { site, type SiteConfig } from "../../data/siteConfig";
 import { ArrowUpRight, Download } from "lucide-react";
 import TechText from "../hero/TechText";
 
+
 export default function Hero({ data = site }: { data?: SiteConfig }) {
   const [first, ...rest] = site.name.split(" ");
   const open = data.availability.open;
@@ -28,6 +29,12 @@ export default function Hero({ data = site }: { data?: SiteConfig }) {
     labels: true,
     draggable: true,
     sweep: true,
+    fontMap: {
+      a: "Isometra, serif",   // ← literal family name, no var()
+    },
+    fontScale: {
+      a: 0.90,   // ← tune this
+    },
   };
 
   return (
@@ -46,11 +53,11 @@ export default function Hero({ data = site }: { data?: SiteConfig }) {
           
           {/* Stacked Animated Name - Tighter heights and margins */}
           <div className="flex flex-col w-full mb-4 md:mb-5">
-            <div className="w-full h-[90px] md:h-[160px] relative">
+            <div className="w-full h-[90px] md:h-[160px] font-family: 'Isometra', sans-serif; relative">
               <TechText {...techProps} text={first} />
             </div>
             {rest.length > 0 && (
-              <div className="w-full h-[90px] md:h-[160px] relative mt-1 md:mt-2">
+              <div className="w-full h-[90px] md:h-[160px] font-family: 'Isometra', sans-serif; relative mt-1 md:mt-2">
                 <TechText {...techProps} text={rest.join(" ")} />
               </div>
             )}
