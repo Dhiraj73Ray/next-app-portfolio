@@ -17,12 +17,12 @@ const jetbrains = JetBrains_Mono({ subsets: ["latin"], variable: "--font-jetbrai
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
-  title: { default: `${site.name} — ${site.role}`, template: `%s | ${site.name}` },
+  title: { default: `${site.name}`, template: `%s | ${site.name}` },
   description: site.tagline,
   openGraph: {
     type: "website",
     url: site.url,
-    title: `${site.name} — ${site.role}`,
+    title: `${site.name}`,
     description: site.tagline,
     siteName: site.name,
   },

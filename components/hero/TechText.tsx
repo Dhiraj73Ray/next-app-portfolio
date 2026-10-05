@@ -319,7 +319,9 @@ const TechText = ({
       };
       word = next;
 
-      const chars = Array.from(s.text);
+      const chars = [...new Intl.Segmenter("hi", {
+  granularity: "grapheme",
+}).segment(s.text)].map(({ segment }) => segment);
       const previous = glyphs;
       glyphs = [];
       let cumulative = 0;

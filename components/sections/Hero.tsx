@@ -53,11 +53,11 @@ export default function Hero({ data = site }: { data?: SiteConfig }) {
           
           {/* Stacked Animated Name - Tighter heights and margins */}
           <div className="flex flex-col w-full mb-4 md:mb-5">
-            <div className="w-full h-[90px] md:h-[160px] font-family: 'Isometra', sans-serif; relative">
+            <div className="w-full h-[90px] md:h-[160px]  relative">
               <TechText {...techProps} text={first} />
             </div>
             {rest.length > 0 && (
-              <div className="w-full h-[90px] md:h-[160px] font-family: 'Isometra', sans-serif; relative mt-1 md:mt-2">
+              <div className="w-full h-[90px] md:h-[160px] relative mt-1 md:mt-2">
                 <TechText {...techProps} text={rest.join(" ")} />
               </div>
             )}

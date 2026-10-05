@@ -18,7 +18,6 @@
  *   Just push more objects into this array.
  *   id must be unique. skills object maps letter → skill name shown on the car.
  */
-
 /**
  * SKILL PUZZLES — Rush Hour Skills (13 levels). All levels verified solvable by BFS.
  *
@@ -63,16 +62,17 @@ export const SKILL_PUZZLES: SkillPuzzle[] = [
   },
   {
     id: "arsenal",
-    title: "Full Arsenal",
-    subtitle: "The modern frontend toolkit, bolted together.",
-    puzzle: "...... .A.... .A.DD. .A.EE. .BBB.C .....C",
-    exit: { side: "bottom", position: 1 },
+    title: "Frontend Arsenal",
+    subtitle: "The toolkit behind every interface I ship.",
+    puzzle: "..BBC. ..D.C. ..D.CA ..E..A ..E..A ..EFFF",
+    exit: { side: "bottom", position: 5 },
     skills: {
       A: "Next.js",
-      B: "Tailwind CSS",
-      C: "SQLAlchemy",
-      D: "Vite",
-      E: "TypeScript",
+      B: "Vite",
+      C: "Framer Motion",
+      D: "GSAP",
+      E: "Tailwind CSS",
+      F: "TypeScript",
     },
   },
   {
@@ -85,7 +85,7 @@ export const SKILL_PUZZLES: SkillPuzzle[] = [
       A: "Vercel",
       B: "GitHub",
       C: "Cloudflare",
-      D: "Git",
+      D: "Render",
       E: "Netlify",
     },
   },
@@ -98,10 +98,10 @@ export const SKILL_PUZZLES: SkillPuzzle[] = [
     skills: {
       A: "VS Code",
       B: "Postman",
-      C: "Cursor",
+      C: "Deepseek",
       D: "npm / pip",
-      E: "Notion",
-      F: "Figma",
+      E: "Git / Github",
+      F: "Powershell",
     },
   },
   {
@@ -126,11 +126,11 @@ export const SKILL_PUZZLES: SkillPuzzle[] = [
     exit: { side: "bottom", position: 1 },
     skills: {
       A: "PostgreSQL",
-      B: "Supabase",
-      C: "SQLite",
-      D: "MongoDB",
-      E: "MySQL",
-      F: "Redis",
+      B: "MySQL",
+      C: "Supabase",
+      D: "TabPlus",
+      E: "SQLite",
+      F: "MongoDB",
     },
   },
   {
