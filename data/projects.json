@@ -17,7 +17,7 @@
         "github": "https://github.com/...",
         "live": "https://..."
       },
-      "image": "/projects/neuro-notes.jpg",
+      "image": [],
       "featured": true
     },
     {
@@ -34,7 +34,7 @@
         { "label": "Latency", "value": "<200ms" }
       ],
       "links": { "github": "https://github.com/..." },
-      "image": "/projects/smart-grid.jpg",
+      "image": [],
       "featured": true
     },
     {
@@ -51,7 +51,7 @@
         { "label": "Power", "value": "0.8W" }
       ],
       "links": { "github": "https://github.com/..." },
-      "image": "/projects/vlsi-alu.jpg",
+      "image": [],
       "featured": false
     },
     {
@@ -68,7 +68,7 @@
         { "label": "Messages/day", "value": "5k" }
       ],
       "links": { "github": "https://github.com/...", "live": "https://..." },
-      "image": "/projects/devconnect.jpg",
+      "image": [],
       "featured": true
     },
     {
@@ -85,7 +85,7 @@
         { "label": "Transfer speed", "value": "110 MB/s" }
       ],
       "links": { "github": "https://github.com/..." },
-      "image": "/projects/pi-nas.jpg",
+      "image": [],
       "featured": false
     },
     {
@@ -102,7 +102,7 @@
         { "label": "GitHub stars", "value": "120" }
       ],
       "links": { "github": "https://github.com/...", "live": "https://..." },
-      "image": "/projects/dsa-visualizer.jpg",
+      "image": [],
       "featured": false
     }
   ]

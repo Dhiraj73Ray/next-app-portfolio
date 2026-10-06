@@ -1,10 +1,11 @@
 "use client";
 
-import React, { useRef, useMemo, useState, useEffect } from "react";
+import React, { useRef, useMemo } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import dynamic from "next/dynamic";
 
-// Lazy-load the 3D scene. Keeps Three.js out of the initial bundle.
+// Lazy-load the 3D scene. Keeps Three.js out of the initial bundle
+// and lets the rest of the page paint first.
 const WelcomeCrowd = dynamic(() => import("../hero/WelcomeCrowd"), {
   ssr: false,
   loading: () => <div className="absolute inset-0 bg-cream" />,
@@ -12,7 +13,6 @@ const WelcomeCrowd = dynamic(() => import("../hero/WelcomeCrowd"), {
 
 export default function Welcome() {
   const targetRef = useRef<HTMLDivElement>(null);
-  const [active, setActive] = useState(true);
 
   const { scrollYProgress } = useScroll({
     target: targetRef,
@@ -22,16 +22,6 @@ export default function Welcome() {
   const crowdScale = useTransform(scrollYProgress, [0, 0.25], [1, 1.8]);
   const crowdSpread = useTransform(scrollYProgress, [0, 0.25], [0, 100]);
   const crowdOpacity = useTransform(scrollYProgress, [0, 0.25, 0.3], [1, 1, 0]);
-  const titleOpacity = useTransform(scrollYProgress, [0, 0.2, 0.3], [0.55, 0.55, 0]);
-
-  // Pause the whole 3D render loop once the crowd has faded out (same 0.3 rule as the original).
-  // setState with an unchanged value is a no-op, so this doesn't re-render on every scroll tick.
-  useEffect(() => {
-    setActive(scrollYProgress.get() < 0.3);
-    return scrollYProgress.on("change", (latest) => {
-      setActive(latest < 0.3);
-    });
-  }, [scrollYProgress]);
 
   const words = useMemo(
     () => [
@@ -96,28 +86,31 @@ export default function Welcome() {
           </motion.div>
         </div>
 
-        {/* 3D Canvas: instanced, lazy-loaded, pauses when scrolled past */}
-        <motion.div
-          className="absolute inset-0 w-full h-full z-10"
-          style={{
-            scale: crowdScale,
-            x: crowdSpread,
-            y: crowdSpread,
-            opacity: crowdOpacity,
-            transformOrigin: "center center",
-            willChange: "transform, opacity",
-          }}
-        >
-          <div className="absolute inset-0 w-full h-full">
-            <WelcomeCrowd imageUrl="/img/Its ME.jpg" active={active} />
-          </div>
-        </motion.div>
+        {/* 3D Canvas — instanced, lazy-loaded, self-pausing */}
+        {/* 3D Canvas — instanced, lazy-loaded, self-pausing */}
+<motion.div
+  className="absolute inset-0 w-full h-full z-10"
+  style={{
+    scale: crowdScale,
+    x: crowdSpread,
+    y: crowdSpread,
+    opacity: crowdOpacity,
+    transformOrigin: "center center",     // ← new
+    willChange: "transform, opacity",     // ← new: promote to its own compositor layer
+  }}
+>
+  <div className="absolute inset-0 w-full h-full">   {/* ← new wrapper to anchor the R3F canvas */}
+    <WelcomeCrowd imageUrl="/img/Its ME.jpg" />
+  </div>
+</motion.div>
 
         {/* Giant Background Text */}
         <div className="absolute inset-0 flex items-end justify-center pb-24 lg:pb-28 z-[-1] pointer-events-none">
           <motion.h1
             className="text-5xl md:text-7xl lg:text-[7.5rem] text-burnt font-black tracking-[0.2em] uppercase text-center"
-            style={{ opacity: titleOpacity }}
+            style={{
+              opacity: useTransform(scrollYProgress, [0, 0.2, 0.3], [0.55, 0.55, 0]),
+            }}
           >
             DHIRAJ RAY
           </motion.h1>

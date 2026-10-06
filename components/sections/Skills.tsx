@@ -13,7 +13,13 @@
 import { useRef, useState, type PointerEvent as RPointerEvent } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { SKILLS, SKILL_CATEGORIES } from "../../data/skillsData";
-import { StackLayout, type Tokens } from "rush-hour-skills";
+import {
+  StackLayout,
+  type Tokens,
+  type Slots,
+  type HeaderSlotProps,
+  type CaptionSlotProps,
+} from "rush-hour-skills";
 import "rush-hour-skills/style.css";
 import { Archive, Puzzle } from "lucide-react";
 import { SKILL_PUZZLES } from "../../data/skills";
@@ -299,17 +305,42 @@ function Cabinet({ reduce }: { reduce: boolean }) {
   );
 }
 
-function PuzzleBoard() {
+/*
+  Puzzle title ab board ke UPAR hai.
+  Package ka header slot sirf `index` deta hai (puzzle config nahi), isliye hum
+  SKILL_PUZZLES[index] se title/subtitle uthate hain. Package ka apna main
+  title/subtitle ("UNLOCK MY SKILLS") ab bilkul render nahi hota, kyunki slot usko replace kar deta hai.
+  Slot components module scope mein hain, taaki har render par naye component na bane (warna remount hota).
+*/
+function PuzzleHeader({ index }: HeaderSlotProps) {
+  const p = SKILL_PUZZLES[index];
+  if (!p) return null;
   return (
-    <StackLayout
-      puzzles={SKILL_PUZZLES}
-      tokens={tokens}
-      header={{
-        title: "",
-        subtitle: "",
-      }}
-    />
+    <div className="mb-4 text-center">
+      <h3 className="font-serif text-2xl font-bold leading-tight tracking-tight text-ink md:text-3xl">
+        {p.title}
+      </h3>
+      {/* min-h: mobile par lambe subtitle 2 line lete hain, isse level badalne par board upar-neeche nahi kudta */}
+      <p className="mx-auto mt-1 min-h-9 max-w-md text-balance font-mono text-[11px] uppercase leading-relaxed tracking-wider text-olive sm:min-h-0">
+        {p.subtitle}
+      </p>
+    </div>
   );
+}
+
+// Title upar chala gaya, neeche sirf "01 / 13" bacha. Theme tokens (muted) follow karta hai.
+function PuzzleIndex({ index, total }: CaptionSlotProps) {
+  return (
+    <span className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-olive tabular-nums">
+      {pad(index + 1)} / {pad(total)}
+    </span>
+  );
+}
+
+const PUZZLE_SLOTS: Slots = { header: PuzzleHeader, caption: PuzzleIndex };
+
+function PuzzleBoard() {
+  return <StackLayout puzzles={SKILL_PUZZLES} tokens={tokens} slots={PUZZLE_SLOTS} />;
 }
 
 export default function Skills() {
@@ -320,7 +351,7 @@ export default function Skills() {
   return (
     <section id="skills" className="relative border-b-4 border-ink bg-cream px-6 py-16 md:px-16 lg:py-24">
       <div className="mx-auto max-w-6xl">
-        <div className="mb-12">
+        <div className={isPuzzle ? "mb-8" : "mb-12"}>
           <span className="mb-3 block font-mono text-xs uppercase tracking-widest text-ink">[ 02 — SKILLS ]</span>
 
           {/* Title + switch on one horizontal line */}

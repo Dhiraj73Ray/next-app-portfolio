@@ -48,7 +48,7 @@ export default function Navbar() {
   return (
     <>
       <header 
-        className={`fixed top-0 left-0 z-50 h-[var(--nav-h)] w-full border-b border-ink bg-cream/90 backdrop-blur-sm transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+        className={`fixed top-0 left-0 z-50 h-[var(--nav-h)] w-full border-b border-ink bg-cream transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
           isVisible ? "translate-y-0" : "-translate-y-full"
         }`}
       >
