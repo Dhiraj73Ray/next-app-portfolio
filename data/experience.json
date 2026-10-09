@@ -1,34 +1,51 @@
 {
   "roles": [
     {
+      "id": "infinite-shoes",
+      "company": "Infinite Shoes",
+      "role": "Computer Operator / Manufacturing Supervisor",
+      "type": "Full-time",
+      "location": "Thane",
+      "start": "Oct 2024",
+      "end": "Feb 2024",
+      "highlights": [
+        "Received and verified material rolls, updated invoices, and maintained inventory records.",
+        "Documented material movements and coordinated with departments for smooth operations.",
+        "Allocated correct materials for cutting, preventing mismatches in production.",
+        "Supervised labor tasks under senior management, ensuring workflow efficiency."
+      ],
+      "stack": ["Inventory-Software", "Data-Entry", "Google SpreadSheet", "Material-Management", "Production-Supervision"]
+    },
+    {
       "id": "redtape",
       "company": "REDTAPE",
-      "role": "Full-Stack Developer",
+      "role": "MIS Executive / Supervisor",
       "type": "Full-time",
-      "location": "City, India",
-      "start": "MMM YYYY",
-      "end": null,
+      "location": "Thane",
+      "start": "Feb 2024",
+      "end": "June 2025",
       "highlights": [
-        "Describe your biggest piece of work here: what you built and at what scale.",
-        "Add one measurable result (speed, users, time saved).",
-        "Add one thing you took ownership of and shipped."
+        "Reconciled dispatch and return data using Excel (VLOOKUP, PivotTables) to identify discrepancies.",
+        "Generated weekly MIS reports for management review.",
+        "Coordinated return workflows across warehouse and customer service teams."
       ],
-      "stack": ["React", "FastAPI", "PostgreSQL"]
+      "stack": ["Advance Excel", "Google SpreadSheet", "Reconciliation", "Automation",  "Reporting", "Seller Portal"]
     },
     {
       "id": "keerti-education",
       "company": "Keerti Education",
-      "role": "Developer",
-      "type": "Internship / Contract",
-      "location": "City, India",
-      "start": "MMM YYYY",
-      "end": "MMM YYYY",
+      "role": "Computer Instructor",
+      "type": "Full-time",
+      "location": "Thane",
+      "start": "Oct 2025",
+      "end": "May 2026",
       "highlights": [
-        "Describe what you built here.",
-        "Describe the problem you solved.",
-        "Describe what you learned that carried forward."
+        "Training students in MS Office tools and internet fundamentals through practical, hands-on sessions.",
+        "Teaching advanced Excel topics including formulas, conditional formatting, and data validation.",
+        "Delivering the structured MS-CIT syllabus with real-world examples and regular assessments.",
+        "Supporting individual learners at different ability levels to build confidence and progress steadily."
       ],
-      "stack": ["Python", "React", "SQL"]
+      "stack": ["MS-OFFICE", "Advance Excel", "VBA", "Web-Development"]
     }
   ]
 }

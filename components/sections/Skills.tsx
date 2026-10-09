@@ -357,7 +357,7 @@ export default function Skills() {
           {/* Title + switch on one horizontal line */}
           <div className="flex flex-wrap items-end justify-between gap-x-8 gap-y-5">
             <h2 className="font-serif text-5xl leading-none tracking-tight text-ink md:text-7xl">
-              {isPuzzle ? "The skill vault" : "The card catalogue"}
+              {isPuzzle ? "The Skill vault" : "The Skill catalogue"}
               <span className="italic font-normal text-swiss">.</span>
             </h2>
 
@@ -385,7 +385,7 @@ export default function Skills() {
 
           <p className="mt-5 max-w-md font-sans text-base leading-relaxed text-ink/70">
             {isPuzzle
-              ? `${SKILL_PUZZLES.length} sliding puzzles. Free the orange car and each level unlocks a stack of skills.`
+              ? `Free the orange car and each level unlocks a stack of skills.`
               : `${SKILLS.length} skills, filed by hand into ${CAT_KEYS.length} drawers. Pull one open and riffle through the cards.`}
           </p>
         </div>
