@@ -201,12 +201,12 @@ export default function ProjectCarousel({
       )}
 
       {/* Chips (click/drag ko nahi rokte) */}
-      <span className="pointer-events-none absolute z-10 top-6 left-3 font-mono text-[10px] uppercase tracking-widest text-olive bg-cream/90 px-1.5 py-0.5">
+      {/* <span className="pointer-events-none absolute z-10 top-6 left-3 font-mono text-[10px] uppercase tracking-widest text-olive bg-cream/90 px-1.5 py-0.5">
         [{project.id}]
       </span>
       <span className="pointer-events-none absolute z-10 bottom-3 left-3 font-mono text-[10px] uppercase tracking-widest bg-ink text-cream px-1.5 py-0.5">
         {project.type}
-      </span>
+      </span> */}
       <span className="pointer-events-none absolute z-10 bottom-3 right-3 font-mono text-[10px] uppercase tracking-widest text-ink/70 bg-cream/90 px-1.5 py-0.5">
         {project.featured && <span className="text-burnt">★ </span>}
         {project.year}

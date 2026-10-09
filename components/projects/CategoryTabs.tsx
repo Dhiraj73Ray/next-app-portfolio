@@ -7,7 +7,7 @@ interface Props {
 
 export default function CategoryTabs({ active, onChange }: Props) {
   return (
-    <div className="flex flex-wrap items-center gap-1.5 font-mono text-[11px]">
+    <div className="flex lg:flex-wrap items-center gap-1.5 font-mono text-[11px] overflow-x-auto lg:overflow-visible pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
       {CATEGORIES.map((cat) => {
         const isActive = active === cat.key;
         return (

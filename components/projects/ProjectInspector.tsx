@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowUpRight, ShieldCheck, Zap, Sparkles } from "lucide-react";
+import { ArrowUpRight, ShieldCheck, Info, Sparkles } from "lucide-react";
 import type { Project } from "./data";
 import ProjectCarousel from "./ProjectCarousel";
 
@@ -62,26 +62,32 @@ export default function ProjectInspector({
               </p>
             </div>
 
+            {project.facts && project.facts.length > 0 && (
             <div>
               <div className="font-mono text-[9px] uppercase tracking-wider text-ink/50 mb-1.5 flex items-center gap-1.5">
-                <Zap className="w-3 h-3 text-burnt" />
-                Impact
+                <Info className="w-3 h-3 text-burnt" />
+                Details
               </div>
               <div className="grid grid-cols-3 gap-2">
-                {project.metrics.map((m) => (
-                  <div key={m.label} className="border-l-2 border-burnt pl-2 min-w-0">
+                {(project.facts ?? []).map((f) => (
+                  <div
+                    key={f.label}
+                    className="border-l-2 border-burnt pl-2 min-w-0"
+                  >
                     <div className="font-serif text-sm text-ink leading-none mb-0.5 truncate">
-                      {m.value}
+                      {f.value}
                     </div>
                     <div className="font-mono text-[8px] uppercase tracking-widest text-olive leading-tight truncate">
-                      {m.label}
+                      {f.label}
                     </div>
                   </div>
                 ))}
               </div>
             </div>
+            )}
           </div>
-
+          
+          {project.tech && project.tech.length > 0 && (
           <div className="mt-3">
             <div className="font-mono text-[9px] uppercase tracking-wider text-ink/50 mb-1.5">
               Stack
@@ -98,6 +104,7 @@ export default function ProjectInspector({
               ))}
             </div>
           </div>
+          )}
 
           <div className="mt-3 flex gap-3 pt-3 border-t border-ink/10 min-h-[30px]">
             {project.links.github && (

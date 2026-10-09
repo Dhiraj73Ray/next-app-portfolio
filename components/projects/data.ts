@@ -8,31 +8,34 @@ export interface Project {
   summary: string;
   description: string;
   tech: string[];
-  metrics: { label: string; value: string }[];
+  facts: { label: string; value: string }[];
   links: { github?: string; live?: string };
-  image: string; // purana single image (fallback)
-  images?: string[]; // screenshots / gifs / logo, e.g. ["/projects/dc-1.png", "/projects/dc-demo.gif"]
+  images: string[];
   featured: boolean;
+  topics?: string[];
+  categories?: string[];
 }
 
-export const PROJECTS: Project[] = projectsData.projects as Project[];
+const featured = (projectsData.projects ?? []) as Project[];
+const backup = ((projectsData as any).backup_projects ?? []) as Project[];
+const learning = ((projectsData as any).learning_projects ?? []) as Project[];
+
+export const PROJECTS: Project[] = [...featured, ...backup, ...learning];
 
 export const CATEGORIES = [
-  { key: "all", label: "All" },
+  { key: "all",       label: "All" },
+  { key: "frontend",  label: "Frontend" },
+  { key: "backend",   label: "Backend" },
   { key: "fullstack", label: "Full-Stack" },
-  { key: "iot", label: "IoT" },
-  { key: "hardware", label: "Hardware" },
+  { key: "python",    label: "Python" },
+  { key: "iot",       label: "IoT" },
 ] as const;
 
-export const getCategory = (type: string): string => {
-  if (type.includes("IoT") || type.includes("Embedded")) return "iot";
-  if (type.includes("VLSI") || type.includes("Hardware")) return "hardware";
-  return "fullstack";
-};
+export type CategoryKey = (typeof CATEGORIES)[number]["key"];
+
+export const getCategories = (p: Project): string[] => p.categories ?? [];
 
 export const filterProjects = (key: string): Project[] =>
-  key === "all" ? PROJECTS : PROJECTS.filter((p) => getCategory(p.type) === key);
+  key === "all" ? PROJECTS : PROJECTS.filter((p) => getCategories(p).includes(key));
 
-// images[] ho toh wahi, warna purana image field, warna khali
-export const getImages = (p: Project): string[] =>
-  p.images && p.images.length > 0 ? p.images : p.image ? [p.image] : [];
+export const getImages = (p: Project): string[] => p.images ?? [];

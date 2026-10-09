@@ -1,109 +1,446 @@
 {
   "projects": [
     {
-      "id": "neuro-notes",
-      "title": "NeuroNotes AI",
+      "id": "png-meter-dashboard",
+      "title": "PNG Meter Reading Dashboard",
       "year": "2024",
-      "type": "AI / Full-Stack",
-      "summary": "AI-powered note summarizer with semantic search.",
-      "description": "Built a full-stack app that ingests lecture notes and generates summaries, flashcards, and Q&A using LLMs. Implemented vector search with pgvector for semantic retrieval.",
-      "tech": ["Next.js", "FastAPI", "PostgreSQL", "pgvector", "OpenAI", "Tailwind"],
-      "metrics": [
-        { "label": "Users", "value": "1,200+" },
-        { "label": "Summaries", "value": "8,500+" },
-        { "label": "Avg. response", "value": "320ms" }
+      "type": "IoT / Frontend",
+      "summary": "A real-time dashboard for reading, monitoring, and analyzing PNG gas meter data.",
+      "description": "A client dashboard system that ingests PNG meter readings from hardware devices, visualizes consumption trends, manages customer records, and exposes an admin view for operations. Handles device sync, offline buffering, and multi-role access.",
+      "tech": ["TailwindCSS", "Alpine.js", "HTML", "CSS"],
+      "facts": [
+        { "label": "Scope", "value": "Client" },
+        { "label": "Dashboards", "value": "Multi-role" },
+        { "label": "Data source", "value": "PNG hardware" }
+      ],
+      "links": { "github": "https://github.com/Auto-PNG-Meter-Reading" },
+      "images": ["/img/image1.png", "/img/image2.png", "/img/image4.png"],
+      "featured": true,
+      "topics": ["iot", "dashboard", "alpinejs", "tailwindcss", "meter-reading"],
+      "categories": ["frontend", "iot"]
+    },
+    {
+      "id": "png-meter-hardware",
+      "title": "PNG Meter Hardware",
+      "year": "2024",
+      "type": "IoT / Embedded",
+      "summary": "Hardware and firmware for reading PNG gas meter pulses and transmitting to the backend.",
+      "description": "Embedded firmware and wiring for reading PNG meter pulses, transmitting readings to the backend, and handling offline buffering. Includes calibration notes and device-to-server protocol.",
+      "tech": ["NodeMCU", "C++", "HTML", "CSS"],
+      "facts": [
+        { "label": "Scope", "value": "Client" },
+        { "label": "Protocol", "value": "Pulse → API" },
+        { "label": "Board", "value": "NodeMCU" }
+      ],
+      "links": { "github": "https://github.com/Auto-PNG-Meter-Reading" },
+      "images": ["/img/image3.png"],
+      "featured": true,
+      "topics": ["iot", "embedded", "nodemcu", "cpp", "esp"],
+      "categories": ["iot"]
+    },
+    {
+      "id": "text-utils",
+      "title": "TextUtils",
+      "year": "2021",
+      "type": "Full-Stack / Django",
+      "summary": "A Django-based text analysis tool with comprehensive text utilities.",
+      "description": "A Django-based text analysis tool with word count, character count, sentence analysis, and text utilities. Deployed on Render with a clean, responsive UI.",
+      "tech": ["Django", "Python", "HTML/CSS", "JavaScript"],
+      "facts": [
+        { "label": "Scope", "value": "Solo" },
+        { "label": "Utilities", "value": "8+" },
+        { "label": "Deployed", "value": "Render" }
       ],
       "links": {
-        "github": "https://github.com/...",
-        "live": "https://..."
+        "github": "https://github.com/Dhiraj73Ray/TextUtils",
+        "live": "https://textutils-render.onrender.com"
       },
-      "image": [],
-      "featured": true
+      "images": ["/img/image5.png", "/img/image6.png"],
+      "featured": true,
+      "topics": ["django", "python", "text-utils", "web-app"],
+      "categories": ["backend", "fullstack"]
     },
     {
-      "id": "smart-grid",
-      "title": "Smart Grid Monitor",
+      "id": "beautiful-task-manager",
+      "title": "Beautiful Task Manager",
       "year": "2023",
-      "type": "IoT / Embedded",
-      "summary": "Real-time energy monitoring with ESP32 and MQTT.",
-      "description": "Designed a low-cost IoT system to monitor voltage, current, and power factor across multiple nodes. Data streamed via MQTT to a FastAPI backend and visualized in React.",
-      "tech": ["ESP32", "MQTT", "FastAPI", "React", "PostgreSQL", "Docker"],
-      "metrics": [
-        { "label": "Nodes", "value": "12" },
-        { "label": "Data points/day", "value": "50k" },
-        { "label": "Latency", "value": "<200ms" }
+      "type": "Full-Stack / React",
+      "summary": "A beautiful task management app with real-time updates and authentication.",
+      "description": "A full-stack task management application built with React, Supabase, and Tailwind CSS. Features user authentication, real-time CRUD operations, task categorization, and a beautiful, responsive UI.",
+      "tech": ["React", "Supabase", "Tailwind CSS", "PostgreSQL", "JavaScript"],
+      "facts": [
+        { "label": "Scope", "value": "Solo" },
+        { "label": "Auth", "value": "Supabase" },
+        { "label": "Realtime", "value": "Yes" }
       ],
-      "links": { "github": "https://github.com/..." },
-      "image": [],
-      "featured": true
+      "links": {
+        "github": "https://github.com/Dhiraj73Ray/beautiful-task-manager",
+        "live": "https://beautiful-task-manager.vercel.app"
+      },
+      "images": ["/img/image7.png", "/img/image8.png"],
+      "featured": true,
+      "topics": ["react", "supabase", "tailwindcss", "task-manager", "full-stack"],
+      "categories": ["backend", "fullstack"]
     },
     {
-      "id": "vlsi-alu",
-      "title": "8-bit ALU in Verilog",
+      "id": "nextjs-task-api",
+      "title": "Next.js Task Generation API",
       "year": "2023",
-      "type": "VLSI / Hardware",
-      "summary": "Designed and simulated an 8-bit ALU using Verilog and Xilinx Vivado.",
-      "description": "Implemented arithmetic and logic operations, verified with testbenches, and synthesized for FPGA. Achieved 150 MHz clock frequency.",
-      "tech": ["Verilog", "Vivado", "FPGA", "Digital Design"],
-      "metrics": [
-        { "label": "Clock", "value": "150 MHz" },
-        { "label": "LUTs", "value": "342" },
-        { "label": "Power", "value": "0.8W" }
+      "type": "AI / Backend API",
+      "summary": "An AI-powered API for generating and suggesting tasks using Groq AI.",
+      "description": "A Next.js API backend that leverages Groq AI to generate, suggest, and optimize tasks from user input. Designed for seamless frontend integration with low latency and high accuracy.",
+      "tech": ["Next.js", "Groq AI", "JavaScript", "API", "Vercel"],
+      "facts": [
+        { "label": "Scope", "value": "Solo" },
+        { "label": "Model", "value": "Groq LLM" },
+        { "label": "Endpoints", "value": "4+" }
       ],
-      "links": { "github": "https://github.com/..." },
-      "image": [],
-      "featured": false
+      "links": {
+        "github": "https://github.com/Dhiraj73Ray/NextJS-Task-API",
+        "live": "https://nextjs-task-api.vercel.app/api/tasks"
+      },
+      "images": ["/img/image9.png"],
+      "featured": true,
+      "topics": ["nextjs", "groq-ai", "api", "ai", "task-generator"],
+      "categories": ["backend"]
     },
     {
-      "id": "devconnect",
-      "title": "DevConnect",
+      "id": "milk-delivery-system",
+      "title": "Milk Delivery System",
       "year": "2024",
-      "type": "Full-Stack",
-      "summary": "A social platform for developers to share projects and find collaborators.",
-      "description": "Built with Next.js, Supabase, and Tailwind. Features authentication, real-time chat, project showcases, and a recommendation engine.",
-      "tech": ["Next.js", "Supabase", "Tailwind", "TypeScript", "PostgreSQL"],
-      "metrics": [
-        { "label": "Users", "value": "800+" },
-        { "label": "Projects shared", "value": "2,300" },
-        { "label": "Messages/day", "value": "5k" }
+      "type": "Full-Stack / E-commerce",
+      "summary": "A full-stack milk delivery platform with admin and partner dashboards.",
+      "description": "A complete e-commerce platform for milk delivery with separate dashboards for admin, partners, and customers. Features order management, real-time delivery tracking, user authentication, payment integration, and analytics.",
+      "tech": ["React", "Tailwind CSS", "FastAPI", "PostgreSQL", "SQLAlchemy"],
+      "facts": [
+        { "label": "Scope", "value": "Solo" },
+        { "label": "Dashboards", "value": "3" },
+        { "label": "Backend", "value": "FastAPI" }
       ],
-      "links": { "github": "https://github.com/...", "live": "https://..." },
-      "image": [],
-      "featured": true
+      "links": {
+        "github": "https://github.com/Dhiraj73Ray/Milk-Delivery-System",
+        "live": "https://milk-delivery-system.vercel.app"
+      },
+      "images": ["/img/image10.png", "/img/image11.png", "/img/image12.png"],
+      "featured": true,
+      "topics": ["full-stack", "fastapi", "react", "postgresql", "ecommerce"],
+      "categories": ["backend", "fullstack"]
     },
     {
-      "id": "pi-nas",
-      "title": "Raspberry Pi NAS",
+      "id": "around-the-world",
+      "title": "Around The World",
       "year": "2022",
-      "type": "Hardware / DevOps",
-      "summary": "DIY network-attached storage with Raspberry Pi and Samba.",
-      "description": "Configured a headless Raspberry Pi as a NAS with automated backups, media streaming, and remote access via Tailscale.",
-      "tech": ["Raspberry Pi", "Linux", "Samba", "Tailscale", "Bash"],
-      "metrics": [
-        { "label": "Storage", "value": "2TB" },
-        { "label": "Uptime", "value": "99.9%" },
-        { "label": "Transfer speed", "value": "110 MB/s" }
+      "type": "Frontend / React",
+      "summary": "A React travel discovery app with filtering, search, and detailed place information.",
+      "description": "An interactive travel discovery application built with React. Features advanced filtering, location search, detailed place information cards, responsive design, and integration with travel APIs.",
+      "tech": ["React", "JavaScript", "CSS", "React Router", "Responsive Design"],
+      "facts": [
+        { "label": "Scope", "value": "Solo" },
+        { "label": "Data", "value": "REST API" },
+        { "label": "Search", "value": "Filter + query" }
       ],
-      "links": { "github": "https://github.com/..." },
-      "image": [],
-      "featured": false
+      "links": {
+        "github": "https://github.com/Dhiraj73Ray/Around-The-World",
+        "live": "https://around-the-world.vercel.app"
+      },
+      "images": ["/img/image13.png", "/img/image14.png"],
+      "featured": true,
+      "topics": ["react", "travel", "api", "frontend"],
+      "categories": ["frontend"]
     },
     {
-      "id": "dsa-visualizer",
-      "title": "DSA Visualizer",
+      "id": "backend-hub",
+      "title": "Backend Hub",
       "year": "2023",
-      "type": "Education / Frontend",
-      "summary": "Interactive visualizations for common data structures and algorithms.",
-      "description": "Built with React and Framer Motion. Covers sorting, searching, trees, and graphs with step-by-step animations and complexity analysis.",
-      "tech": ["React", "TypeScript", "Framer Motion", "Tailwind"],
-      "metrics": [
-        { "label": "Algorithms", "value": "18" },
-        { "label": "Monthly visits", "value": "4k" },
-        { "label": "GitHub stars", "value": "120" }
+      "type": "Backend / Serverless",
+      "summary": "A serverless backend hub exposing multiple APIs for personal projects.",
+      "description": "A collection of production-ready APIs built with serverless architecture. Includes task generation, user management, data processing, and utility endpoints. Deployed on Vercel with automatic scaling.",
+      "tech": ["Node.js", "Serverless", "Vercel", "REST API"],
+      "facts": [
+        { "label": "Scope", "value": "Solo" },
+        { "label": "Endpoints", "value": "8+" },
+        { "label": "Runtime", "value": "Serverless" }
       ],
-      "links": { "github": "https://github.com/...", "live": "https://..." },
-      "image": [],
-      "featured": false
+      "links": {
+        "github": "https://github.com/Dhiraj73Ray/backendhub",
+        "live": "https://backend-hub.vercel.app"
+      },
+      "images": ["/img/image15.png"],
+      "featured": true,
+      "topics": ["serverless", "api", "backend", "nodejs", "vercel"],
+      "categories": ["backend"]
+    }
+  ],
+
+  "backup_projects": [
+    {
+      "id": "college-management-app",
+      "title": "College Management App",
+      "year": "2022",
+      "type": "Full-Stack / Django",
+      "summary": "A Django-based college management system for students, courses, and admin operations.",
+      "description": "A comprehensive college management system built with Django. Includes student registration, course management, grade tracking, and admin dashboard for managing all operations.",
+      "tech": ["Django", "Python", "PostgreSQL", "HTML/CSS"],
+      "facts": [
+        { "label": "Scope", "value": "Solo" },
+        { "label": "Roles", "value": "Admin / Student" },
+        { "label": "Modules", "value": "Courses, grades" }
+      ],
+      "links": { "github": "https://github.com/Dhiraj73Ray/College_Management_App" },
+      "images": ["/img/image16.png", "/img/image17.png"],
+      "featured": false,
+      "topics": ["django", "python", "college", "management", "crud"],
+      "categories": ["backend", "fullstack"]
+    },
+    {
+      "id": "strong-password",
+      "title": "Strong Password",
+      "year": "2023",
+      "type": "Web App / Django",
+      "summary": "A Fun-Django app for generating and validating strong passwords with security metrics.",
+      "description": "A Django-based password security tool that generates strong passwords and validates password strength. Includes security best practices, entropy calculation, and visual feedback.",
+      "tech": ["Django", "Python", "Django Forms", "Security"],
+      "facts": [
+        { "label": "Scope", "value": "Solo" },
+        { "label": "Checks", "value": "Entropy + rules" },
+        { "label": "Forms", "value": "Django Forms" }
+      ],
+      "links": { "github": "https://github.com/Dhiraj73Ray/Strong-Password" },
+      "images": ["/img/image19.png"],
+      "featured": false,
+      "topics": ["django", "python", "security", "password", "forms"],
+      "categories": ["backend", "fullstack"]
+    }
+  ],
+
+  "learning_projects": [
+    {
+      "id": "atm-machine",
+      "title": "ATM Machine",
+      "year": "2022",
+      "type": "Learning / Python",
+      "summary": "A simple ATM machine simulation with account management and transactions.",
+      "description": "A command-line ATM simulation demonstrating object-oriented programming principles, account management, and transaction handling.",
+      "tech": ["Python"],
+      "facts": [
+        { "label": "Scope", "value": "Solo" },
+        { "label": "Language", "value": "Python" },
+        { "label": "Type", "value": "CLI + OOP" }
+      ],
+      "links": { "github": "https://github.com/Dhiraj73Ray/ATM-Machine" },
+      "images": ["/img/image20.png"],
+      "featured": false,
+      "topics": ["python", "oop", "learning", "simulation"],
+      "categories": ["python"]
+    },
+    {
+      "id": "cards-stacking-gsap",
+      "title": "Cards Stacking Animation",
+      "year": "2023",
+      "type": "Frontend / Animation",
+      "summary": "Interactive card stacking animation using GSAP and JavaScript.",
+      "description": "A demonstration of advanced animation techniques using GSAP library. Features smooth card stacking, parallax effects, and interactive elements.",
+      "tech": ["JavaScript", "GSAP", "HTML/CSS"],
+      "facts": [
+        { "label": "Scope", "value": "Solo" },
+        { "label": "Library", "value": "GSAP" },
+        { "label": "Type", "value": "Animation demo" }
+      ],
+      "links": { "github": "https://github.com/Dhiraj73Ray/Cards-Stacking-with-GSAP" },
+      "images": ["/img/image21.png"],
+      "featured": false,
+      "topics": ["gsap", "animation", "javascript", "frontend"],
+      "categories": ["frontend"]
+    },
+    {
+      "id": "pictures-sorter",
+      "title": "Pictures Sorter",
+      "year": "2024",
+      "type": "Utility / Python",
+      "summary": "A tool to automatically organize and sort pictures by date, name, or custom criteria.",
+      "description": "Batch image organization tool that automatically sorts and renames pictures based on metadata, creation date, or file properties.",
+      "tech": ["Python", "Image Processing"],
+      "facts": [
+        { "label": "Scope", "value": "Solo" },
+        { "label": "Language", "value": "Python" },
+        { "label": "Type", "value": "Automation" }
+      ],
+      "links": { "github": "https://github.com/Dhiraj73Ray/Pictures-Sorter" },
+      "images": ["/img/image22.png"],
+      "featured": false,
+      "topics": ["python", "utility", "image-processing", "automation"],
+      "categories": ["python"]
+    },
+    {
+      "id": "spotdl-downloader",
+      "title": "SpotDL Spotify Downloader",
+      "year": "2023",
+      "type": "Utility / Audio",
+      "summary": "A Spotify music downloader using SpotDL for offline listening.",
+      "description": "A wrapper around SpotDL that simplifies downloading Spotify tracks and playlists with metadata preservation.",
+      "tech": ["Python", "SpotDL", "Audio Processing"],
+      "facts": [
+        { "label": "Scope", "value": "Solo" },
+        { "label": "Wrapper", "value": "SpotDL" },
+        { "label": "Type", "value": "CLI tool" }
+      ],
+      "links": { "github": "https://github.com/Dhiraj73Ray/SpotDL-Spotify-Downloader" },
+      "images": ["/img/image23.png"],
+      "featured": false,
+      "topics": ["python", "spotify", "audio", "downloader"],
+      "categories": ["python"]
+    },
+    {
+      "id": "insta-downloader",
+      "title": "Instagram Downloader",
+      "year": "2023",
+      "type": "Utility / Python",
+      "summary": "A tool to download Instagram posts, stories, and reels.",
+      "description": "Utility for downloading Instagram content including posts, stories, and reels while preserving metadata.",
+      "tech": ["Python", "Selenium", "Instagram API"],
+      "facts": [
+        { "label": "Scope", "value": "Solo" },
+        { "label": "Automation", "value": "Selenium" },
+        { "label": "Type", "value": "CLI tool" }
+      ],
+      "links": { "github": "https://github.com/Dhiraj73Ray/Insta-Downloder" },
+      "images": ["/img/image24.png"],
+      "featured": false,
+      "topics": ["python", "instagram", "downloader", "utility"],
+      "categories": ["python"]
+    },
+    {
+      "id": "musique-player",
+      "title": "Musique Player",
+      "year": "2023",
+      "type": "Frontend / Music",
+      "summary": "A web music player that streams tracks from Google Drive with playlist management and audio controls.",
+      "description": "A React-based music player that pulls tracks from Google Drive via the Drive API. Supports playlists, playback controls, and a clean listening UI.",
+      "tech": ["React", "Google Drive API", "API Integration"],
+      "facts": [
+        { "label": "Scope", "value": "Solo" },
+        { "label": "Source", "value": "Google Drive" },
+        { "label": "Type", "value": "Web player" }
+      ],
+      "links": { "github": "https://github.com/Dhiraj73Ray/musique-player" },
+      "images": ["/img/image25.png", "/img/image26.png"],
+      "featured": false,
+      "topics": ["react", "google-drive-api", "music-player", "frontend"],
+      "categories": ["frontend"]
+    },
+    {
+      "id": "hello-exam",
+      "title": "Hello Exam",
+      "year": "2023",
+      "type": "Web App / Django",
+      "summary": "An online exam or quiz portal for testing and assessment.",
+      "description": "An educational platform for creating, taking, and grading online exams and quizzes with real-time feedback.",
+      "tech": ["Python", "Django"],
+      "facts": [
+        { "label": "Scope", "value": "Solo" },
+        { "label": "Stack", "value": "Django" },
+        { "label": "Type", "value": "Web app" }
+      ],
+      "links": { "github": "https://github.com/Dhiraj73Ray/Hello_Exam" },
+      "images": ["/img/image29.png", "/img/image27.png", "/img/image28.png"],
+      "featured": false,
+      "topics": ["python", "django", "exam", "education"],
+      "categories": ["backend", "fullstack"]
+    },
+    {
+      "id": "flash-launch",
+      "title": "Flash Launch",
+      "year": "2023",
+      "type": "Utility / Python",
+      "summary": "A fast, quick search bar for the PC system (similar like windows search) but clean, and without any local search results.only with real-time internet results and more.",
+      "description": "A desktop search launcher built with Python and OS-level integration. Type a query and it opens the default browser directly to results, with real-time suggestions.",
+      "tech": ["Python", "OS"],
+      "facts": [
+        { "label": "Scope", "value": "Solo" },
+        { "label": "Language", "value": "Python" },
+        { "label": "Type", "value": "System launcher" }
+      ],
+      "links": { "github": "https://github.com/Dhiraj73Ray/FlashLaunch" },
+      "images": ["/img/image30.png"],
+      "featured": false,
+      "topics": ["python", "launcher", "search", "automation"],
+      "categories": ["python"]
+    },
+    {
+      "id": "rush-hour",
+      "title": "Rush Hour",
+      "year": "2023",
+      "type": "Game / Full-Stack",
+      "summary": "A traffic puzzle game inspired by the classic Rush Hour board game.",
+      "description": "An interactive Rush Hour puzzle game where players slide vehicles to clear the path. Includes multiple difficulty levels, time tracking, and a Python-backed game engine served to a React frontend.",
+      "tech": ["Python", "React"],
+      "facts": [
+        { "label": "Scope", "value": "Solo" },
+        { "label": "Backend", "value": "Python" },
+        { "label": "Frontend", "value": "React" }
+      ],
+      "links": { "github": "https://github.com/Dhiraj73Ray/Rush-Hour" },
+      "images": ["/img/image31.png"],
+      "featured": false,
+      "topics": ["game", "puzzle", "python", "react"],
+      "categories": ["backend", "fullstack"]
+    },
+    {
+      "id": "rayflix",
+      "title": "RayFlix",
+      "year": "2021",
+      "type": "Entertainment / Full-Stack",
+      "summary": "A movie discovery web app with search, details, and user data stored in MySQL.",
+      "description": "A React-based movie app that fetches movie data from an external Movies API and persists user data (favorites, watchlist) in MySQL. Includes search, filtering, and responsive UI.",
+      "tech": ["React", "Movies API", "MySQL"],
+      "facts": [
+        { "label": "Scope", "value": "Solo" },
+        { "label": "Data", "value": "Movies API" },
+        { "label": "Storage", "value": "MySQL" }
+      ],
+      "links": { "github": "https://github.com/Dhiraj73Ray/RayFlix.com" },
+      "images": ["/img/image32.png", "/img/image33.png"],
+      "featured": false,
+      "topics": ["react", "movies-api", "mysql", "web-app"],
+      "categories": ["backend", "fullstack"]
+    },
+    {
+      "id": "profile-card",
+      "title": "Profile Card",
+      "year": "2021",
+      "type": "Frontend / Component",
+      "summary": "A reusable profile card component for displaying user information.",
+      "description": "A responsive profile card component showcasing user information with modern CSS styling and interactive hover effects.",
+      "tech": ["HTML", "CSS", "JavaScript"],
+      "facts": [
+        { "label": "Scope", "value": "Solo" },
+        { "label": "Stack", "value": "HTML/CSS" },
+        { "label": "Type", "value": "UI component" }
+      ],
+      "links": { "github": "https://github.com/Dhiraj73Ray/Profile-Card" },
+      "images": ["/img/image34.png"],
+      "featured": false,
+      "topics": ["component", "html", "css", "reusable"],
+      "categories": ["frontend"]
+    },
+    {
+      "id": "rock-paper-scissors",
+      "title": "Rock Paper Scissors",
+      "year": "2020",
+      "type": "Game / Python CLI",
+      "summary": "A classic rock-paper-scissors game built as a Python CLI.",
+      "description": "An interactive rock-paper-scissors game in the terminal with score tracking and a simple computer AI.",
+      "tech": ["Python"],
+      "facts": [
+        { "label": "Scope", "value": "Solo" },
+        { "label": "Language", "value": "Python" },
+        { "label": "Type", "value": "CLI game" }
+      ],
+      "links": { "github": "https://github.com/Dhiraj73Ray/Rock-Paper-Scissors-Game" },
+      "images": ["/img/image35.png"],
+      "featured": false,
+      "topics": ["python", "game", "cli", "learning"],
+      "categories": ["python"]
     }
   ]
 }
