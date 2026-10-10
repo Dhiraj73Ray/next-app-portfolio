@@ -90,12 +90,9 @@ export const Projects: React.FC = () => {
         {/* Header + tabs: ek row */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 mb-4 shrink-0">
           <div>
-            <div className="flex items-center gap-2 text-burnt font-mono text-[10px] uppercase tracking-widest font-semibold mb-2">
-              <span className="inline-block w-1.5 h-1.5 rounded-full bg-burnt animate-pulse" />
-              Selected Builds
-            </div>
+            <span className="mb-3 block font-mono text-xs uppercase tracking-widest text-ink">[ 04 — PROJECTS ]</span>
             <h2 className="font-serif text-4xl sm:text-5xl text-ink font-bold tracking-tight leading-none">
-              Projects<span className="italic font-normal text-swiss">.</span>
+              What I've been building<span className="italic font-normal text-swiss">.</span>
             </h2>
           </div>
           <CategoryTabs active={activeCategory} onChange={changeCategory} />
@@ -150,6 +147,7 @@ export const Projects: React.FC = () => {
             <ProjectInspector
               project={activeProject}
               number={activeNumber}
+              
               previewing={Boolean(hoveredProject)}
             />
           </div>

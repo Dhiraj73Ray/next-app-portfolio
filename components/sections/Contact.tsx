@@ -18,7 +18,7 @@ export default function Contact({ data = defaultSite }: { data?: SiteConfig }) {
         {/* LEFT: sirf desktop par. Mobile par sirf form (email/socials Footer mein hain) */}
         <div className="hidden lg:block lg:col-span-5">
           <span className="block font-mono text-xs uppercase tracking-widest text-ink mb-3">
-            [ 05 — CONTACT ]
+            [ 06 — CONTACT ]
           </span>
           <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl tracking-tight leading-[0.95] text-ink">
             Have something in mind? Let&apos;s talk.

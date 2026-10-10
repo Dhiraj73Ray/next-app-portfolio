@@ -38,6 +38,7 @@ export const viewport: Viewport = { themeColor: "#F4EFE6" };
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={cn("font-sans", geist.variable)}>
+      <link rel="icon" type="image/x-icon" href="/favicon.ico"></link>
       <style>
 @import url('https://fonts.googleapis.com/css2?family=Isometra&display=swap');
 </style>

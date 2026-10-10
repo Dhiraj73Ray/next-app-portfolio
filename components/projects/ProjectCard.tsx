@@ -60,9 +60,9 @@ export default function ProjectCard({
                 <Check className="w-2.5 h-2.5 stroke-[3]" /> PINNED
               </span>
             )}
-            {project.featured && (
-              <span className="px-1.5 py-0.5 text-[8px] tracking-wider uppercase font-semibold bg-burnt text-cream">
-                ★
+            {project.status && (
+              <span className={`px-1.5 py-0.5 text-[8px] tracking-wider uppercase font-semibold ${project.status === 'Completed' ? 'bg-[#4A943E]' : project.status === 'On-going' ? 'bg-[#D98327]' : project.status === 'In Progress' ? 'bg-[#186049]' : 'bg-[#ECE8AF]'} text-cream`}>
+                {project.status}
               </span>
             )}
             <span className="px-1.5 py-0.5 text-[8px] tracking-wider uppercase font-semibold bg-ink/10 text-ink/70">

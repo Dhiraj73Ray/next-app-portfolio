@@ -14,6 +14,7 @@ export function LeftSidebar({ activeSection }: { activeSection: string }) {
 
   return (
     <aside className="hidden md:block sticky top-28 w-60 h-[calc(100vh-8rem)] overflow-y-auto pr-4 flex-shrink-0">
+      <span className="mb-9 block font-mono text-xs uppercase tracking-widest text-ink">[ 02 — ABOUT ]</span>
       {menuStructure.map((group) => (
         <div key={group.title} className="mb-8">
           <h4 className="font-mono text-[10px] uppercase tracking-widest text-olive mb-3 border-b border-ink/20 pb-2">

@@ -15,7 +15,7 @@
       ],
       "links": { "github": "https://github.com/Auto-PNG-Meter-Reading" },
       "images": ["/img/image1.png", "/img/image2.png", "/img/image4.png"],
-      "featured": true,
+      "status": "Completed",
       "topics": ["iot", "dashboard", "alpinejs", "tailwindcss", "meter-reading"],
       "categories": ["frontend", "iot"]
     },
@@ -34,7 +34,7 @@
       ],
       "links": { "github": "https://github.com/Auto-PNG-Meter-Reading" },
       "images": ["/img/image3.png"],
-      "featured": true,
+      "status": "Completed",
       "topics": ["iot", "embedded", "nodemcu", "cpp", "esp"],
       "categories": ["iot"]
     },
@@ -56,7 +56,7 @@
         "live": "https://textutils-render.onrender.com"
       },
       "images": ["/img/image5.png", "/img/image6.png"],
-      "featured": true,
+      "status": "Completed",
       "topics": ["django", "python", "text-utils", "web-app"],
       "categories": ["backend", "fullstack"]
     },
@@ -78,7 +78,7 @@
         "live": "https://beautiful-task-manager.vercel.app"
       },
       "images": ["/img/image7.png", "/img/image8.png"],
-      "featured": true,
+      "status": "Completed",
       "topics": ["react", "supabase", "tailwindcss", "task-manager", "full-stack"],
       "categories": ["backend", "fullstack"]
     },
@@ -100,7 +100,7 @@
         "live": "https://nextjs-task-api.vercel.app/api/tasks"
       },
       "images": ["/img/image9.png"],
-      "featured": true,
+      "status": "Completed",
       "topics": ["nextjs", "groq-ai", "api", "ai", "task-generator"],
       "categories": ["backend"]
     },
@@ -122,7 +122,7 @@
         "live": "https://milk-delivery-system.vercel.app"
       },
       "images": ["/img/image10.png", "/img/image11.png", "/img/image12.png"],
-      "featured": true,
+      "status": "Completed",
       "topics": ["full-stack", "fastapi", "react", "postgresql", "ecommerce"],
       "categories": ["backend", "fullstack"]
     },
@@ -144,7 +144,7 @@
         "live": "https://around-the-world.vercel.app"
       },
       "images": ["/img/image13.png", "/img/image14.png"],
-      "featured": true,
+      "status": "Completed",
       "topics": ["react", "travel", "api", "frontend"],
       "categories": ["frontend"]
     },
@@ -166,7 +166,7 @@
         "live": "https://backend-hub.vercel.app"
       },
       "images": ["/img/image15.png"],
-      "featured": true,
+      "status": "In Progress",
       "topics": ["serverless", "api", "backend", "nodejs", "vercel"],
       "categories": ["backend"]
     }
@@ -188,7 +188,7 @@
       ],
       "links": { "github": "https://github.com/Dhiraj73Ray/College_Management_App" },
       "images": ["/img/image16.png", "/img/image17.png"],
-      "featured": false,
+      "status": "In Progress",
       "topics": ["django", "python", "college", "management", "crud"],
       "categories": ["backend", "fullstack"]
     },
@@ -207,7 +207,7 @@
       ],
       "links": { "github": "https://github.com/Dhiraj73Ray/Strong-Password" },
       "images": ["/img/image19.png"],
-      "featured": false,
+      "status": "Completed",
       "topics": ["django", "python", "security", "password", "forms"],
       "categories": ["backend", "fullstack"]
     }
@@ -229,7 +229,7 @@
       ],
       "links": { "github": "https://github.com/Dhiraj73Ray/ATM-Machine" },
       "images": ["/img/image20.png"],
-      "featured": false,
+      "status": "Completed",
       "topics": ["python", "oop", "learning", "simulation"],
       "categories": ["python"]
     },
@@ -248,7 +248,7 @@
       ],
       "links": { "github": "https://github.com/Dhiraj73Ray/Cards-Stacking-with-GSAP" },
       "images": ["/img/image21.png"],
-      "featured": false,
+      "status": "Completed",
       "topics": ["gsap", "animation", "javascript", "frontend"],
       "categories": ["frontend"]
     },
@@ -267,7 +267,7 @@
       ],
       "links": { "github": "https://github.com/Dhiraj73Ray/Pictures-Sorter" },
       "images": ["/img/image22.png"],
-      "featured": false,
+      "status": "In Progress",
       "topics": ["python", "utility", "image-processing", "automation"],
       "categories": ["python"]
     },
@@ -286,7 +286,7 @@
       ],
       "links": { "github": "https://github.com/Dhiraj73Ray/SpotDL-Spotify-Downloader" },
       "images": ["/img/image23.png"],
-      "featured": false,
+      "status": "In Progress",
       "topics": ["python", "spotify", "audio", "downloader"],
       "categories": ["python"]
     },
@@ -305,7 +305,7 @@
       ],
       "links": { "github": "https://github.com/Dhiraj73Ray/Insta-Downloder" },
       "images": ["/img/image24.png"],
-      "featured": false,
+      "status": "On-going",
       "topics": ["python", "instagram", "downloader", "utility"],
       "categories": ["python"]
     },
@@ -324,7 +324,7 @@
       ],
       "links": { "github": "https://github.com/Dhiraj73Ray/musique-player" },
       "images": ["/img/image25.png", "/img/image26.png"],
-      "featured": false,
+      "status": "On-going",
       "topics": ["react", "google-drive-api", "music-player", "frontend"],
       "categories": ["frontend"]
     },
@@ -343,7 +343,7 @@
       ],
       "links": { "github": "https://github.com/Dhiraj73Ray/Hello_Exam" },
       "images": ["/img/image29.png", "/img/image27.png", "/img/image28.png"],
-      "featured": false,
+      "status": "In Progress",
       "topics": ["python", "django", "exam", "education"],
       "categories": ["backend", "fullstack"]
     },
@@ -362,7 +362,7 @@
       ],
       "links": { "github": "https://github.com/Dhiraj73Ray/FlashLaunch" },
       "images": ["/img/image30.png"],
-      "featured": false,
+      "status": "On-going",
       "topics": ["python", "launcher", "search", "automation"],
       "categories": ["python"]
     },
@@ -381,7 +381,7 @@
       ],
       "links": { "github": "https://github.com/Dhiraj73Ray/Rush-Hour" },
       "images": ["/img/image31.png"],
-      "featured": false,
+      "status": "Completed",
       "topics": ["game", "puzzle", "python", "react"],
       "categories": ["backend", "fullstack"]
     },
@@ -400,7 +400,7 @@
       ],
       "links": { "github": "https://github.com/Dhiraj73Ray/RayFlix.com" },
       "images": ["/img/image32.png", "/img/image33.png"],
-      "featured": false,
+      "status": "In Progress",
       "topics": ["react", "movies-api", "mysql", "web-app"],
       "categories": ["backend", "fullstack"]
     },
@@ -419,7 +419,7 @@
       ],
       "links": { "github": "https://github.com/Dhiraj73Ray/Profile-Card" },
       "images": ["/img/image34.png"],
-      "featured": false,
+      "status": "Completed",
       "topics": ["component", "html", "css", "reusable"],
       "categories": ["frontend"]
     },
@@ -438,7 +438,7 @@
       ],
       "links": { "github": "https://github.com/Dhiraj73Ray/Rock-Paper-Scissors-Game" },
       "images": ["/img/image35.png"],
-      "featured": false,
+      "status": "Completed",
       "topics": ["python", "game", "cli", "learning"],
       "categories": ["python"]
     }

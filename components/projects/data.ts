@@ -11,16 +11,17 @@ export interface Project {
   facts: { label: string; value: string }[];
   links: { github?: string; live?: string };
   images: string[];
-  featured: boolean;
+  // featured: boolean;
   topics?: string[];
   categories?: string[];
+  status?: string;
 }
 
-const featured = (projectsData.projects ?? []) as Project[];
+const status = (projectsData.projects ?? []) as Project[];
 const backup = ((projectsData as any).backup_projects ?? []) as Project[];
 const learning = ((projectsData as any).learning_projects ?? []) as Project[];
 
-export const PROJECTS: Project[] = [...featured, ...backup, ...learning];
+export const PROJECTS: Project[] = [...status, ...backup, ...learning];
 
 export const CATEGORIES = [
   { key: "all",       label: "All" },

@@ -10,7 +10,7 @@ export default function Experience() {
       {/* Header */}
       <div className="mb-16 max-w-3xl">
         <span className="font-mono text-xs uppercase tracking-widest text-ink block mb-3">
-          [ 04 — EXPERIENCE ]
+          [ 05 — EXPERIENCE ]
         </span>
         <h2 className="font-serif text-5xl md:text-7xl tracking-tight text-ink leading-none">
           Where I&apos;ve shipped

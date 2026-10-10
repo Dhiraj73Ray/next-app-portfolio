@@ -352,7 +352,7 @@ export default function Skills() {
     <section id="skills" className="relative border-b-4 border-ink bg-cream px-6 py-16 md:px-16 lg:py-24">
       <div className="mx-auto max-w-6xl">
         <div className={isPuzzle ? "mb-8" : "mb-12"}>
-          <span className="mb-3 block font-mono text-xs uppercase tracking-widest text-ink">[ 02 — SKILLS ]</span>
+          <span className="mb-3 block font-mono text-xs uppercase tracking-widest text-ink">[ 03 — SKILLS ]</span>
 
           {/* Title + switch on one horizontal line */}
           <div className="flex flex-wrap items-end justify-between gap-x-8 gap-y-5">
