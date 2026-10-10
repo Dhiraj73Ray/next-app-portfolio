@@ -58,9 +58,9 @@ export default function Hero({ data = site }: { data?: SiteConfig }) {
             </div>
             {rest.length > 0 && (
   <div className="w-full h-[90px] md:h-[160px] relative mt-1 md:mt-2">
-    <h1 className="font-semibold text-6xl md:text-[150px] md:text text-ink leading-none">
-      {rest.join(" ")}
-    </h1>
+    <h1 className="font-sans font-semibold text-6xl md:text-[150px] text-ink leading-none">
+  {rest.join(" ")}
+</h1>
   </div>
 )}
           </div>
