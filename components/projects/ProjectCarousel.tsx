@@ -10,6 +10,7 @@ import {
 } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { getImages, type Project } from "./data";
+import Image from "next/image";
 
 const AUTOPLAY_MS = 2000; // har slide kitni der rukegi
 
@@ -36,13 +37,14 @@ function Slide({ src, alt, number }: { src?: string; alt: string; number: number
 
   return (
     // eslint-disable-next-line @next/next/no-img-element
-    <img
-      src={src}
-      alt={alt}
-      draggable={false}
-      onError={() => setFailed(true)}
-      className="absolute inset-0 w-full h-full object-cover object-top select-none"
-    />
+    <Image
+  src={src}
+  alt={alt}
+  fill
+  sizes="(max-width: 768px) 100vw, 50vw"
+  className="object-cover object-top select-none"
+  draggable={false}
+/>
   );
 }
 
@@ -208,7 +210,6 @@ export default function ProjectCarousel({
         {project.type}
       </span> */}
       <span className="pointer-events-none absolute z-10 bottom-3 right-3 font-mono text-[10px] uppercase tracking-widest text-ink/70 bg-cream/90 px-1.5 py-0.5">
-        {project.featured && <span className="text-burnt">★ </span>}
         {project.year}
       </span>
     </div>

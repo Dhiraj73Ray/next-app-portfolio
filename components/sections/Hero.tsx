@@ -57,10 +57,12 @@ export default function Hero({ data = site }: { data?: SiteConfig }) {
               <TechText {...techProps} text={first} />
             </div>
             {rest.length > 0 && (
-              <div className="w-full h-[90px] md:h-[160px] relative mt-1 md:mt-2">
-                <TechText {...techProps} text={rest.join(" ")} />
-              </div>
-            )}
+  <div className="w-full h-[90px] md:h-[160px] relative mt-1 md:mt-2">
+    <h1 className="font-semibold text-6xl md:text-[150px] md:text text-ink leading-none">
+      {rest.join(" ")}
+    </h1>
+  </div>
+)}
           </div>
 
           <p className="font-sans text-base sm:text-lg md:text-xl text-ink max-w-lg mb-6 md:mb-8">

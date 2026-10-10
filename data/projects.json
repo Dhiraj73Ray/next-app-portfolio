@@ -5,16 +5,16 @@
       "title": "PNG Meter Reading Dashboard",
       "year": "2024",
       "type": "IoT / Frontend",
-      "summary": "A real-time dashboard for reading, monitoring, and analyzing PNG gas meter data.",
-      "description": "A client dashboard system that ingests PNG meter readings from hardware devices, visualizes consumption trends, manages customer records, and exposes an admin view for operations. Handles device sync, offline buffering, and multi-role access.",
+      "summary": "A real-time dashboard for reading, monitoring, and analyzing png gas meter data.",
+      "description": "A client dashboard system that ingests png meter readings from hardware devices, visualizes consumption trends, manages customer records, and exposes an admin view for operations. Handles device sync, offline buffering, and multi-role access.",
       "tech": ["TailwindCSS", "Alpine.js", "HTML", "CSS"],
       "facts": [
         { "label": "Scope", "value": "Client" },
         { "label": "Dashboards", "value": "Multi-role" },
-        { "label": "Data source", "value": "PNG hardware" }
+        { "label": "Data source", "value": "png hardware" }
       ],
       "links": { "github": "https://github.com/Auto-PNG-Meter-Reading" },
-      "images": ["/img/image1.png", "/img/image2.png", "/img/image4.png"],
+      "images": ["/img/image1.webp", "/img/image2.webp", "/img/image4.webp"],
       "status": "Completed",
       "topics": ["iot", "dashboard", "alpinejs", "tailwindcss", "meter-reading"],
       "categories": ["frontend", "iot"]
@@ -24,8 +24,8 @@
       "title": "PNG Meter Hardware",
       "year": "2024",
       "type": "IoT / Embedded",
-      "summary": "Hardware and firmware for reading PNG gas meter pulses and transmitting to the backend.",
-      "description": "Embedded firmware and wiring for reading PNG meter pulses, transmitting readings to the backend, and handling offline buffering. Includes calibration notes and device-to-server protocol.",
+      "summary": "Hardware and firmware for reading png gas meter pulses and transmitting to the backend.",
+      "description": "Embedded firmware and wiring for reading png meter pulses, transmitting readings to the backend, and handling offline buffering. Includes calibration notes and device-to-server protocol.",
       "tech": ["NodeMCU", "C++", "HTML", "CSS"],
       "facts": [
         { "label": "Scope", "value": "Client" },
@@ -33,7 +33,7 @@
         { "label": "Board", "value": "NodeMCU" }
       ],
       "links": { "github": "https://github.com/Auto-PNG-Meter-Reading" },
-      "images": ["/img/image3.png"],
+      "images": ["/img/image3.webp"],
       "status": "Completed",
       "topics": ["iot", "embedded", "nodemcu", "cpp", "esp"],
       "categories": ["iot"]
@@ -55,7 +55,7 @@
         "github": "https://github.com/Dhiraj73Ray/TextUtils",
         "live": "https://textutils-render.onrender.com"
       },
-      "images": ["/img/image5.png", "/img/image6.png"],
+      "images": ["/img/image5.webp", "/img/image6.webp"],
       "status": "Completed",
       "topics": ["django", "python", "text-utils", "web-app"],
       "categories": ["backend", "fullstack"]
@@ -77,7 +77,7 @@
         "github": "https://github.com/Dhiraj73Ray/beautiful-task-manager",
         "live": "https://beautiful-task-manager.vercel.app"
       },
-      "images": ["/img/image7.png", "/img/image8.png"],
+      "images": ["/img/image7.webp", "/img/image8.webp"],
       "status": "Completed",
       "topics": ["react", "supabase", "tailwindcss", "task-manager", "full-stack"],
       "categories": ["backend", "fullstack"]
@@ -99,7 +99,7 @@
         "github": "https://github.com/Dhiraj73Ray/NextJS-Task-API",
         "live": "https://nextjs-task-api.vercel.app/api/tasks"
       },
-      "images": ["/img/image9.png"],
+      "images": ["/img/image9.webp"],
       "status": "Completed",
       "topics": ["nextjs", "groq-ai", "api", "ai", "task-generator"],
       "categories": ["backend"]
@@ -121,7 +121,7 @@
         "github": "https://github.com/Dhiraj73Ray/Milk-Delivery-System",
         "live": "https://milk-delivery-system.vercel.app"
       },
-      "images": ["/img/image10.png", "/img/image11.png", "/img/image12.png"],
+      "images": ["/img/image10.webp", "/img/image11.webp", "/img/image12.webp"],
       "status": "Completed",
       "topics": ["full-stack", "fastapi", "react", "postgresql", "ecommerce"],
       "categories": ["backend", "fullstack"]
@@ -143,7 +143,7 @@
         "github": "https://github.com/Dhiraj73Ray/Around-The-World",
         "live": "https://around-the-world.vercel.app"
       },
-      "images": ["/img/image13.png", "/img/image14.png"],
+      "images": ["/img/image13.webp", "/img/image14.webp"],
       "status": "Completed",
       "topics": ["react", "travel", "api", "frontend"],
       "categories": ["frontend"]
@@ -165,7 +165,7 @@
         "github": "https://github.com/Dhiraj73Ray/backendhub",
         "live": "https://backend-hub.vercel.app"
       },
-      "images": ["/img/image15.png"],
+      "images": ["/img/image15.webp"],
       "status": "In Progress",
       "topics": ["serverless", "api", "backend", "nodejs", "vercel"],
       "categories": ["backend"]
@@ -187,7 +187,7 @@
         { "label": "Modules", "value": "Courses, grades" }
       ],
       "links": { "github": "https://github.com/Dhiraj73Ray/College_Management_App" },
-      "images": ["/img/image16.png", "/img/image17.png"],
+      "images": ["/img/image16.webp", "/img/image17.webp"],
       "status": "In Progress",
       "topics": ["django", "python", "college", "management", "crud"],
       "categories": ["backend", "fullstack"]
@@ -206,7 +206,7 @@
         { "label": "Forms", "value": "Django Forms" }
       ],
       "links": { "github": "https://github.com/Dhiraj73Ray/Strong-Password" },
-      "images": ["/img/image19.png"],
+      "images": ["/img/image19.webp"],
       "status": "Completed",
       "topics": ["django", "python", "security", "password", "forms"],
       "categories": ["backend", "fullstack"]
@@ -228,7 +228,7 @@
         { "label": "Type", "value": "CLI + OOP" }
       ],
       "links": { "github": "https://github.com/Dhiraj73Ray/ATM-Machine" },
-      "images": ["/img/image20.png"],
+      "images": ["/img/image20.webp"],
       "status": "Completed",
       "topics": ["python", "oop", "learning", "simulation"],
       "categories": ["python"]
@@ -247,7 +247,7 @@
         { "label": "Type", "value": "Animation demo" }
       ],
       "links": { "github": "https://github.com/Dhiraj73Ray/Cards-Stacking-with-GSAP" },
-      "images": ["/img/image21.png"],
+      "images": ["/img/image21.webp"],
       "status": "Completed",
       "topics": ["gsap", "animation", "javascript", "frontend"],
       "categories": ["frontend"]
@@ -266,7 +266,7 @@
         { "label": "Type", "value": "Automation" }
       ],
       "links": { "github": "https://github.com/Dhiraj73Ray/Pictures-Sorter" },
-      "images": ["/img/image22.png"],
+      "images": ["/img/image22.webp"],
       "status": "In Progress",
       "topics": ["python", "utility", "image-processing", "automation"],
       "categories": ["python"]
@@ -285,7 +285,7 @@
         { "label": "Type", "value": "CLI tool" }
       ],
       "links": { "github": "https://github.com/Dhiraj73Ray/SpotDL-Spotify-Downloader" },
-      "images": ["/img/image23.png"],
+      "images": ["/img/image23.webp"],
       "status": "In Progress",
       "topics": ["python", "spotify", "audio", "downloader"],
       "categories": ["python"]
@@ -304,7 +304,7 @@
         { "label": "Type", "value": "CLI tool" }
       ],
       "links": { "github": "https://github.com/Dhiraj73Ray/Insta-Downloder" },
-      "images": ["/img/image24.png"],
+      "images": ["/img/image24.webp"],
       "status": "On-going",
       "topics": ["python", "instagram", "downloader", "utility"],
       "categories": ["python"]
@@ -323,7 +323,7 @@
         { "label": "Type", "value": "Web player" }
       ],
       "links": { "github": "https://github.com/Dhiraj73Ray/musique-player" },
-      "images": ["/img/image25.png", "/img/image26.png"],
+      "images": ["/img/image25.webp", "/img/image26.webp"],
       "status": "On-going",
       "topics": ["react", "google-drive-api", "music-player", "frontend"],
       "categories": ["frontend"]
@@ -342,7 +342,7 @@
         { "label": "Type", "value": "Web app" }
       ],
       "links": { "github": "https://github.com/Dhiraj73Ray/Hello_Exam" },
-      "images": ["/img/image29.png", "/img/image27.png", "/img/image28.png"],
+      "images": ["/img/image29.webp", "/img/image27.webp", "/img/image28.webp"],
       "status": "In Progress",
       "topics": ["python", "django", "exam", "education"],
       "categories": ["backend", "fullstack"]
@@ -361,7 +361,7 @@
         { "label": "Type", "value": "System launcher" }
       ],
       "links": { "github": "https://github.com/Dhiraj73Ray/FlashLaunch" },
-      "images": ["/img/image30.png"],
+      "images": ["/img/image30.webp"],
       "status": "On-going",
       "topics": ["python", "launcher", "search", "automation"],
       "categories": ["python"]
@@ -380,7 +380,7 @@
         { "label": "Frontend", "value": "React" }
       ],
       "links": { "github": "https://github.com/Dhiraj73Ray/Rush-Hour" },
-      "images": ["/img/image31.png"],
+      "images": ["/img/image31.webp"],
       "status": "Completed",
       "topics": ["game", "puzzle", "python", "react"],
       "categories": ["backend", "fullstack"]
@@ -399,7 +399,7 @@
         { "label": "Storage", "value": "MySQL" }
       ],
       "links": { "github": "https://github.com/Dhiraj73Ray/RayFlix.com" },
-      "images": ["/img/image32.png", "/img/image33.png"],
+      "images": ["/img/image32.webp", "/img/image33.webp"],
       "status": "In Progress",
       "topics": ["react", "movies-api", "mysql", "web-app"],
       "categories": ["backend", "fullstack"]
@@ -418,7 +418,7 @@
         { "label": "Type", "value": "UI component" }
       ],
       "links": { "github": "https://github.com/Dhiraj73Ray/Profile-Card" },
-      "images": ["/img/image34.png"],
+      "images": ["/img/image34.webp"],
       "status": "Completed",
       "topics": ["component", "html", "css", "reusable"],
       "categories": ["frontend"]
@@ -437,7 +437,7 @@
         { "label": "Type", "value": "CLI game" }
       ],
       "links": { "github": "https://github.com/Dhiraj73Ray/Rock-Paper-Scissors-Game" },
-      "images": ["/img/image35.png"],
+      "images": ["/img/image35.webp"],
       "status": "Completed",
       "topics": ["python", "game", "cli", "learning"],
       "categories": ["python"]

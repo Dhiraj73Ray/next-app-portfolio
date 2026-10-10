@@ -39,9 +39,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={cn("font-sans", geist.variable)}>
       <link rel="icon" type="image/x-icon" href="/favicon.ico"></link>
-      <style>
-@import url('https://fonts.googleapis.com/css2?family=Isometra&display=swap');
-</style>
       <body className={`${fraunces.variable} ${inter.variable} ${jetbrains.variable} font-sans bg-cream text-ink antialiased`}>
         <a
           href="#main"

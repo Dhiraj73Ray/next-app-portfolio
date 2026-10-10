@@ -12,7 +12,7 @@ import { useEffect, useRef, useState } from "react";
 const ARM = 10;        // crosshair arm length
 const GAP = 3;         // gap between center square and arm start
 const SQ = 3;          // half-size of center square
-const SPRING = { stiffness: 520, damping: 36, mass: 0.35 } as const;
+// const SPRING = { stiffness: 80, damping: 10, mass: 0.15 } as const;
 const INK = "#1A1A1A";
 const BURNT = "#FF5A1F";        // brighter burnt-orange (was #D9531E)
 const HOVER_ROTATE = 135;       // rotation for X shape
@@ -84,8 +84,8 @@ function getState(el: Element | null): CursorState {
 export default function Cursor() {
   const mx = useMotionValue(-200);
   const my = useMotionValue(-200);
-  const sx = useSpring(mx, SPRING);
-  const sy = useSpring(my, SPRING);
+  // const sx = useSpring(mx, SPRING);
+  // const sy = useSpring(my, SPRING);
 
   const [state, setState] = useState<CursorState>("default");
   const [visible, setVisible] = useState(false);
@@ -144,8 +144,8 @@ export default function Cursor() {
       aria-hidden
       className="pointer-events-none fixed left-0 top-0 z-[9999] hidden [@media(hover:hover)_and_(pointer:fine)]:block"
       style={{
-        x: sx,
-        y: sy,
+        x: mx,
+        y: my,
         translateX: "-50%",
         translateY: "-50%",
         opacity: visible ? 1 : 0,
