@@ -95,7 +95,7 @@ export default function ProjectCard({
               </span>
             ))}
             {project.tech.length > 2 && (
-              <span className="font-mono text-[8px] text-ink/40">
+              <span className="font-mono text-[8px] text-ink/70">
                 +{project.tech.length - 2}
               </span>
             )}
@@ -103,29 +103,29 @@ export default function ProjectCard({
 
           <div className="flex items-center gap-2 flex-shrink-0">
             {project.links.github && (
-              <a
-                href={project.links.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={(e) => e.stopPropagation()}
-                title="GitHub"
-                className="font-mono text-[9px] uppercase text-ink/50 hover:text-burnt transition-colors"
-              >
-                src
-              </a>
-            )}
-            {project.links.live && (
-              <a
-                href={project.links.live}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={(e) => e.stopPropagation()}
-                title="Live Demo"
-                className="text-ink/50 hover:text-burnt transition-colors"
-              >
-                <ExternalLink className="w-3 h-3" />
-              </a>
-            )}
+  <a
+    href={project.links.github}
+    target="_blank"
+    rel="noopener noreferrer"
+    onClick={(e) => e.stopPropagation()}
+    title="GitHub"
+    className="inline-flex items-center justify-center min-h-[32px] min-w-[32px] px-2 font-mono text-[9px] uppercase text-ink/60 hover:text-burnt transition-colors"
+  >
+    src
+  </a>
+)}
+{project.links.live && (
+  <a
+    href={project.links.live}
+    target="_blank"
+    rel="noopener noreferrer"
+    onClick={(e) => e.stopPropagation()}
+    title="Live Demo"
+    className="inline-flex items-center justify-center min-h-[32px] min-w-[32px] text-ink/60 hover:text-burnt transition-colors"
+  >
+    <ExternalLink className="w-3.5 h-3.5" />
+  </a>
+)}
           </div>
         </div>
       </div>

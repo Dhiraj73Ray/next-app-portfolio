@@ -12,16 +12,16 @@ export default function CategoryTabs({ active, onChange }: Props) {
         const isActive = active === cat.key;
         return (
           <button
-            key={cat.key}
-            onClick={() => onChange(cat.key)}
-            className={`px-3 py-1.5 transition-colors duration-200 border cursor-pointer ${
-              isActive
-                ? "bg-ink text-cream border-ink"
-                : "bg-transparent text-ink/70 border-ink/15 hover:border-ink/50 hover:text-ink"
-            }`}
-          >
-            {isActive ? `[ ${cat.label} ]` : cat.label}
-          </button>
+  key={cat.key}
+  onClick={() => onChange(cat.key)}
+  className={`px-3 py-2 min-h-[36px] transition-colors duration-200 border cursor-pointer ${
+    isActive
+      ? "bg-ink text-cream border-ink"
+      : "bg-transparent text-ink/70 border-ink/15 hover:border-ink/50 hover:text-ink"
+  }`}
+>
+  {isActive ? `[ ${cat.label} ]` : cat.label}
+</button>
         );
       })}
     </div>

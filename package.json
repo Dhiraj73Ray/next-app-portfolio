@@ -1,5 +1,11 @@
 {
   "name": "frontend",
+  "browserslist": [
+    "chrome >= 100",
+    "firefox >= 100",
+    "safari >= 15",
+    "edge >= 100"
+  ],
   "version": "0.1.0",
   "private": true,
   "scripts": {

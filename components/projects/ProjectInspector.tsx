@@ -47,9 +47,9 @@ export default function ProjectInspector({
             {badge ?? (previewing ? "Previewing" : "Pinned")}
           </div>
 
-          <h4 className="font-serif text-xl sm:text-2xl font-bold text-ink leading-tight truncate">
-            {project.title}
-          </h4>
+          <h3 className="font-serif text-xl sm:text-2xl font-bold text-ink leading-tight truncate">
+  {project.title}
+</h3>
 
           <div className="mt-3 border-t border-b border-ink/10 py-3 space-y-3">
             <div>

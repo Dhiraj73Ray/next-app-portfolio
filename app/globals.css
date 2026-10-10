@@ -9,7 +9,7 @@
   --color-ink: #1A1A1A;
   --color-burnt: #D9531E;
   --color-swiss: #C1272D;
-  --color-olive: #6B6B4A;
+  --color-olive: #55553F;
 
   /* Font Families */
   --font-serif: var(--font-fraunces), serif;
@@ -32,7 +32,7 @@
   --black: #1A1A1A;
   --orange: #D9531E;
   --swiss-red: #C1272D;
-  --olive: #6B6B4A;
+  --olive: #55553F;
 
   /* Navbar ki height. Ek jagah badlo: anchor scroll aur Projects ka stage dono follow karte hain */
   --nav-h: 64px;

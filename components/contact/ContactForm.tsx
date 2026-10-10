@@ -28,7 +28,7 @@ const ACCESS_KEY = process.env.NEXT_PUBLIC_CONTACT_ACCESS_KEY;
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
 const lineInput =
-  "w-full bg-transparent border-0 border-b-2 border-ink py-2 font-sans text-base text-ink placeholder:text-ink/30 focus:outline-none focus:border-burnt focus:shadow-[0_2px_0_0_#D9531E] transition-colors";
+  "w-full bg-transparent border-0 border-b-2 border-ink py-2 font-sans text-base text-ink placeholder:text-ink/50 focus:outline-none focus:border-burnt focus:shadow-[0_2px_0_0_#D9531E] transition-colors";
 
 function FieldWrap({
   id,
